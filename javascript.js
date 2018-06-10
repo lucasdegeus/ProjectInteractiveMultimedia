@@ -25,7 +25,7 @@ function receiveData() {
 	//Vervangt overal waar %20 staat voor een spatiebalk, anders krijg je tussen de voornaam en achternaam van mensen %20
 	var name = name.replace(/%20/g," ")
 	var difficulty = dataarray[1];
-	document.getElementById("container").innerHTML = "Hier zou je naam en moeilijkheidsgraag moeten komen te staan" + name + difficulty;
+	document.getElementById("container").innerHTML = "Welkom " + name + '! Je hebt gekozen voor level: ' + difficulty;
 	if (difficulty == "easy") {
 		loadquestioneasy();
 	}

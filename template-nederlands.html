@@ -1,20 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<title>Rijksmuseum: The Digital Experience</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="javascript.js"></script>
 </head>
 <body onload="receiveData()">
-NEDERLANDS TEMPLATE
-<div id='container'>hoi</div>
-<span id="question"></span><br>
+<h3 id='container'></h3>
+<h3 id="question"></h3><br>
 <table id="questionform" align="center">
 	<tr>
-		<td><img src="IMG/abcd/a.png" id="a" onclick="changeImg('a')" style="width:50%;"></img></td>
+		<td>
+			<!-- <div class="mc-circle">A</div> -->
+			<img src="IMG/abcd/a.png" id="a" onclick="changeImg('a')" style="width:50%;"></img>
+		</td>
 		<td><span id="answer1"></span><br></td>
 	</tr>
-
 
 	<tr>
 		<td><img src="IMG/abcd/b.png" id="b" onclick="changeImg('b')" style="width:50%"></img></td>
@@ -32,7 +34,12 @@ NEDERLANDS TEMPLATE
 </tr>
 </table>
 
-
+<!-- <form action="">
+	<input type="radio" name="question" value="a"><span id="answer1"></span><br>
+	<input type="radio" name="question" value="b"><span id="answer2"></span><br>
+	<input type="radio" name="question" value="c"><span id="answer3"></span><br>
+	<input type="radio" name="question" value="d"><span id="answer4"></span><br>
+</form> -->
 
 <button id="nextquestion" type="button" onclick="nextquestion()">Volgende ></button>
 </body>
