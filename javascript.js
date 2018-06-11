@@ -84,8 +84,8 @@ function test() {
 }
 
 function setAnswer(answer) {
-	document.getElementsByClassName("mc-circle").style.backgroundColor = "#fff";
-	document.getElementsByClassName("mc-circle").style.color = "#343A55";
+	// document.getElementsByClassName("mc-circle").style.backgroundColor = "red";
+	// document.getElementsByClassName("mc-circle").style.color = "#343A55";
 	document.getElementById(answer).style.backgroundColor = "#343A55";
 	document.getElementById(answer).style.color = "#fff";
 	//localStorage.setItem("currentAnswer", answer);
