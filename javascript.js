@@ -83,12 +83,20 @@ function test() {
 	}
 }
 
+function changeAllBackgrounds(x) {
+    elements = document.getElementsByClassName(x);
+    for (var i = 0; i < elements.length; i++) {
+		elements[i].style.backgroundColor="#FFF";
+		elements[i].style.color="#343A55";
+    }
+}
+
 function setAnswer(answer) {
-	document.getElementsByClassName("mc-circle").style.backgroundColor = "red";
-	document.getElementsByClassName("mc-circle").style.color = "#343A55";
-	document.getElementsByClassName("a").style.backgroundColor = "#343A55";
+	changeAllBackgrounds('mc-circle');
+	document.getElementById('a').style.color = "#343A55";
+	document.getElementById(answer).style.backgroundColor = "#343A55";
 	document.getElementById(answer).style.color = "#fff";
-	//localStorage.setItem("currentAnswer", answer);
+	localStorage.setItem("currentAnswer", answer);
 }
 
 function changeImg(varx) {
