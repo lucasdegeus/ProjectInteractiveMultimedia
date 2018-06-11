@@ -38,7 +38,7 @@ function receiveData() {
 }
 	
 function loadquestioneasy() {
-	document.getElementById("question").innerHTML = "Hier komt een makkelijke vraag door javacsript";
+	document.getElementById("question").innerHTML = "Hier komt een makkelijke vraag door javascript";
 	document.getElementById("answer1").innerHTML = "Hier wordt antwoord 1 ingeladen door javascript makelijk"
 	document.getElementById("answer2").innerHTML = "Hier wordt antwoord 2 ingeladen door javascript makelijk"
 	document.getElementById("answer3").innerHTML = "Hier wordt antwoord 3 ingeladen door javascript makelijk"
@@ -46,7 +46,7 @@ function loadquestioneasy() {
 }
 
 function loadquestionmedium() {
-	document.getElementById("question").innerHTML = "Hier komt een medium vraag door javacsript";
+	document.getElementById("question").innerHTML = "Hier komt een medium vraag door javascript";
 	document.getElementById("answer1").innerHTML = "Hier wordt antwoord 1 ingeladen door javascript medium"
 	document.getElementById("answer2").innerHTML = "Hier wordt antwoord 2 ingeladen door javascript medium"
 	document.getElementById("answer3").innerHTML = "Hier wordt antwoord 3 ingeladen door javascript medium"
@@ -54,7 +54,7 @@ function loadquestionmedium() {
 }
 
 function loadquestionhard() {
-	document.getElementById("question").innerHTML = "Hier komt een moeilijk vraag door javacsript";
+	document.getElementById("question").innerHTML = "Hier komt een moeilijk vraag door javascript";
 	document.getElementById("answer1").innerHTML = "Hier wordt antwoord 1 ingeladen door javascript moeilijk"
 	document.getElementById("answer2").innerHTML = "Hier wordt antwoord 2 ingeladen door javascript moeilijk"
 	document.getElementById("answer3").innerHTML = "Hier wordt antwoord 3 ingeladen door javascript moeilijk"
