@@ -85,15 +85,19 @@ h3 {
 	}
 } 
 
-// .mc-circle {
-// 	background-color: #fff;
-//     border-radius: 100%;
-//     width: 55px;
-//     display: table-cell;
-//     vertical-align: middle;
-//     height: 55px;
-//     text-align: center;
-// }
+.mc-circle {
+	background-color: #fff;
+    border-radius: 100%;
+    width: 55px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 55px;
+	text-align: center;
+	&:hover {
+		background-color: $dark-blue;
+		color: #fff;
+	}
+}
 
 #inputfields {
 	text-align:center;
@@ -155,17 +159,26 @@ h3 {
 }
 
 #nextquestion {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 19px;
+    font-weight: 500;
 	margin-top: 50px !important;
     font-weight: 500 !important;
-    font-size: 15px;
 	width:70%;
 	text-align:center;
-	padding-bottom:10px;
-	padding-top:10px;
+	padding: 20px;
 	margin:auto;
 	display:block;
-	border-radius:15px;
+	border-radius: 80px;
+	border: none;
 	@include bp(M768) {
 		width: 600px;
+	}
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background-color: $dark-blue;
+		color: #fff;
 	}
 }

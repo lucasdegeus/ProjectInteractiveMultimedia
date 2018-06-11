@@ -12,26 +12,28 @@
 <table id="questionform" align="center">
 	<tr>
 		<td>
-			<!-- <div class="mc-circle">A</div> -->
-			<img src="IMG/abcd/a.png" id="a" onclick="changeImg('a')" style="width:50%;"></img>
+			<div class="mc-circle" id="a" onclick="setAnswer('a')">A</div>
 		</td>
 		<td><span id="answer1"></span><br></td>
 	</tr>
-
 	<tr>
-		<td><img src="IMG/abcd/b.png" id="b" onclick="changeImg('b')" style="width:50%"></img></td>
+		<td>
+			<div class="mc-circle" id="b" onclick="setAnswer('b')">B</div>
+		</td>
 		<td><span id="answer2"></span><br></td>
 	</tr>
-
 	<tr>
-		<td><img src="IMG/abcd/c.png" id="c" onclick="changeImg('c')" style="width:50%"></img></td>
+		<td>
+			<div class="mc-circle" id="c" onclick="setAnswer('c')">C</div>
+		</td>
 		<td><span id="answer3"></span><br></td>
 	</tr>
-
 	<tr>
-		<td><img src="IMG/abcd/d.png" id="d" onclick="changeImg('d')" style="width:50%"></img></td>
+		<td>
+			<div class="mc-circle" id="d" onclick="setAnswer('d')">D</div>
+		</td>
 		<td><span id="answer4"></span><br></td>
-</tr>
+	</tr>
 </table>
 
 <!-- <form action="">

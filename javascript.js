@@ -83,6 +83,14 @@ function test() {
 	}
 }
 
+function setAnswer(answer) {
+	document.getElementsByClassName("mc-circle").style.backgroundColor = "red";
+	document.getElementsByClassName("mc-circle").style.color = "#343A55";
+	document.getElementById(answer).style.backgroundColor = "#343A55";
+	document.getElementById(answer).style.color = "#fff";
+	//localStorage.setItem("currentAnswer", answer);
+}
+
 function changeImg(varx) {
 	document.getElementById('a').src = 'IMG/abcd/a.png';
 	document.getElementById('b').src = 'IMG/abcd/b.png';
@@ -93,6 +101,6 @@ function changeImg(varx) {
 }
 
 function nextquestion() {
-	var hoi = localStorage.currentActive
+	var hoi = localStorage.currentAnswer
 	alert(hoi)
 }
