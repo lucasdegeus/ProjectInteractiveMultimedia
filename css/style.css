@@ -1,76 +1,95 @@
-/* line 1, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 1, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 html {
   height: 100%;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+}
 
-/* line 8, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 8, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background: linear-gradient(#515D97, #404750); }
+  background: linear-gradient(#515D97, #404750);
+}
 
-/* line 39, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 39, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #mt-big {
-  margin-top: 40px; }
+  margin-top: 40px;
+}
 
-/* line 42, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 42, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #mt-medium {
-  margin-top: 30px; }
+  margin-top: 30px;
+}
 
-/* line 45, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 45, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #mt-small {
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
-/* line 48, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 48, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #mt-xs {
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
-/* line 52, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 52, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #header {
   margin-top: 40px;
-  text-align: center; }
-  /* line 55, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-  #header #logo {
-    width: 70%; }
-    @media (min-width: 768px) {
-      /* line 55, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-      #header #logo {
-        width: 600px; } }
-  /* line 61, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-  #header #subtext {
-    color: white;
-    text-align: center;
-    font-weight: 400;
-    font-size: 14px;
-    margin-top: 5px; }
+  text-align: center;
+}
 
-/* line 70, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 55, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#header #logo {
+  width: 70%;
+}
+
+@media (min-width: 768px) {
+  /* line 55, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+  #header #logo {
+    width: 600px;
+  }
+}
+
+/* line 61, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#header #subtext {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* line 70, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 h3 {
   padding-top: 10px;
   color: white;
   text-align: center;
   font-size: 18px;
-  font-weight: 500; }
+  font-weight: 500;
+}
 
-/* line 79, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 79, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #flags {
-  text-align: center; }
-  /* line 81, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-  #flags img {
-    width: 100px;
-    margin: 20px;
-    border-radius: 20px; }
+  text-align: center;
+}
 
-/* line 88, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 81, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#flags img {
+  width: 100px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+/* line 88, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 .wrapper-65 {
-  width: 65px; }
+  width: 65px;
+}
 
-/* line 91, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 91, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 .mc-circle {
   background-color: #fff;
   border-radius: 100%;
@@ -78,39 +97,49 @@ h3 {
   display: table-cell;
   vertical-align: middle;
   height: 55px;
-  text-align: center; }
-  /* line 99, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-  .mc-circle:hover {
-    background-color: #343A55;
-    color: #fff; }
+  text-align: center;
+}
 
-/* line 105, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 99, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.mc-circle:hover {
+  background-color: #343A55;
+  color: #fff;
+}
+
+/* line 105, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #inputfields {
-  text-align: center; }
-  /* line 107, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-  #inputfields input, #inputfields select {
-    font-family: 'Montserrat', sans-serif;
-    text-align-last: center;
-    width: 70%;
-    text-align: center;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    background-color: #343A55;
-    border: none;
-    font-size: 16px;
-    color: white;
-    margin-bottom: 15px;
-    padding: 19px 0;
-    font-weight: 500; }
-    /* line 122, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-    #inputfields input::placeholder, #inputfields select::placeholder {
-      color: #485170; }
-    /* line 125, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-    #inputfields input:focus, #inputfields select:focus {
-      outline: none; }
+  text-align: center;
+}
 
-/* line 131, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 107, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields input, #inputfields select {
+  font-family: 'Montserrat', sans-serif;
+  text-align-last: center;
+  width: 70%;
+  text-align: center;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #343A55;
+  border: none;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 15px;
+  padding: 19px 0;
+  font-weight: 500;
+}
+
+/* line 122, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields input::placeholder, #inputfields select::placeholder {
+  color: #485170;
+}
+
+/* line 125, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields input:focus, #inputfields select:focus {
+  outline: none;
+}
+
+/* line 131, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #inputfields button {
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
@@ -122,30 +151,37 @@ h3 {
   margin-top: 20px;
   font-size: 19px;
   font-weight: 500;
-  border-radius: 80px; }
-  /* line 143, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-  #inputfields button:focus {
-    outline: none; }
-  /* line 146, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-  #inputfields button:hover {
-    background-color: #343A55;
-    color: #fff; }
+  border-radius: 80px;
+}
 
-/* line 152, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 143, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields button:focus {
+  outline: none;
+}
+
+/* line 146, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields button:hover {
+  background-color: #343A55;
+  color: #fff;
+}
+
+/* line 152, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #questionform img {
   margin-right: 3%;
   margin-bottom: 2%;
   width: 7%;
   -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%); }
+  clip-path: circle(50% at 50% 50%);
+}
 
-/* line 160, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 160, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #questionform {
   text-align: center;
-  width: 90%; }
+  width: 90%;
+}
 
-/* line 165, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-#nextquestion {
+/* line 165, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#info, #nextquestion {
   font-family: 'Montserrat', sans-serif;
   font-size: 19px;
   font-weight: 500;
@@ -157,17 +193,25 @@ h3 {
   margin: auto;
   display: block;
   border-radius: 80px;
-  border: none; }
-  @media (min-width: 768px) {
-    /* line 165, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-    #nextquestion {
-      width: 600px; } }
-  /* line 181, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-  #nextquestion:focus {
-    outline: none; }
-  /* line 184, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
-  #nextquestion:hover {
-    background-color: #343A55;
-    color: #fff; }
+  border: none;
+}
+
+@media (min-width: 768px) {
+  /* line 165, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+  #info, #nextquestion {
+    width: 600px;
+  }
+}
+
+/* line 181, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#info:focus, #nextquestion:focus {
+  outline: none;
+}
+
+/* line 184, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#info:hover, #nextquestion:hover {
+  background-color: #343A55;
+  color: #fff;
+}
 
 /*# sourceMappingURL=../css/style.map */
