@@ -85,6 +85,9 @@ h3 {
 	}
 } 
 
+.wrapper-65 {
+	width: 65px;
+}
 .mc-circle {
 	background-color: #fff;
     border-radius: 100%;
@@ -112,7 +115,7 @@ h3 {
 		background-color: $dark-blue;
 		border: none;
 		font-size: 16px;
-		color: $light-blue;
+		color: white;
 		margin-bottom: 15px;
 		padding: 19px 0;
 		font-weight: 500;
@@ -156,9 +159,10 @@ h3 {
 
 #questionform {
 	text-align:center;
+	width: 90%;
 }
 
-#nextquestion {
+#info, #nextquestion {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 19px;
     font-weight: 500;
