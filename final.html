@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+	<script>
+			const config = {
+    apiKey: "AIzaSyBSYQEzJnHMP4rexiPbMHVtRosqtEeHFL4",
+    authDomain: "pim-project-b8698.firebaseapp.com",
+    databaseURL: "https://pim-project-b8698.firebaseio.com",
+    storageBucket: "pim-project-b8698.appspot.com",
+ 	 };
+  	firebase.initializeApp(config);
+  </script>
+	<title>Rijksmuseum: The Digital Experience</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="javascript.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+</head>
+</head>
+<body>
+<center><div class="final-announcement">
+		<a href="index.html">Dit waren alle vragen, linkje om terug te gaan naar index.</a>
+		<div id="amountCorrect"></div>
+		
+		<script>
+			document.getElementById("amountCorrect").innerHTML = "Zoveel had je goed: "+localStorage.correctCounter;
+		</script>
+		<button type="button" onclick="saveScore()">Sla mijn score op</button>
+</div></center>
+</body>
+</html>
