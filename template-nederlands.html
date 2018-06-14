@@ -2,10 +2,13 @@
 <html>
 <head>
 	<title>Rijksmuseum: The Digital Experience</title>
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+
 </head>
 </head>
 <body onload="receiveData()">
@@ -16,25 +19,25 @@
 		<td class="wrapper-65">
 			<div class="mc-circle" id="a" onclick="setAnswer('a')">A</div>
 		</td>
-		<td><span id="answer1"></span><br></td>
+		<td><span class="answerOption" id="answer1"></span><br></td>
 	</tr>
 	<tr>
 		<td class="wrapper-65">
 			<div class="mc-circle" id="b" onclick="setAnswer('b')">B</div>
 		</td>
-		<td><span id="answer2"></span><br></td>
+		<td><span class="answerOption" id="answer2"></span><br></td>
 	</tr>
 	<tr>
 		<td class="wrapper-65">
 			<div class="mc-circle" id="c" onclick="setAnswer('c')">C</div>
 		</td>
-		<td><span id="answer3"></span><br></td>
+		<td><span class="answerOption" id="answer3"></span><br></td>
 	</tr>
 	<tr>
 		<td class="wrapper-65">
 			<div class="mc-circle" id="d" onclick="setAnswer('d')">D</div>
 		</td>
-		<td><span id="answer4"></span><br></td>
+		<td><span class="answerOption" id="answer4"></span><br></td>
 	</tr>
 </table>
 

@@ -202,3 +202,37 @@ h3 {
 	font-weight: 500;
 	text-align:center;
 }
+
+.answerOption{
+	color: #fff;
+	font-weight: 500;
+}
+
+.final-announcement {
+	a {
+		color: #fff;
+	}
+	margin-top: 50px;
+	color: #fff;
+	font-weight: 500;
+	button{
+		font-family: 'Montserrat', sans-serif;
+		background-color: #fff;
+		color: $light-blue;
+		border: none;
+		width:70%;
+		text-align:center;
+		padding: 20px;
+		margin-top: 20px;
+		font-size: 19px;
+		font-weight: 500;
+		border-radius: 80px;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			background-color: $dark-blue;
+			color: #fff;
+		}
+	}
+}
