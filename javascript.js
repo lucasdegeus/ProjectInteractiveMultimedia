@@ -75,3 +75,22 @@ function saveScore() {
 	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
 	xdataObject.child('amountofplayers').set(Number(localStorage.amountofplayers)+1);
 }
+
+;(function ($) {
+	'use strict';
+	var content  = $('#main').smoothState({
+		  // onStart runs as soon as link has been activated
+		  onStart : {
+			
+			// Set the duration of our animation
+			duration: 250,
+			
+			// Alterations to the page
+			render: function () {
+  
+			  // Quickly toggles a class and restarts css animations
+			  content.toggleAnimationClass('is-exiting');
+			}
+		  }
+		}).data('smoothState'); // makes public methods available
+  })(jQuery);
