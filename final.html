@@ -2,6 +2,7 @@
 <html>
 <head>
 	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+  	<script type="text/javascript" src="https://kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 	<script>
 			const config = {
     apiKey: "AIzaSyBSYQEzJnHMP4rexiPbMHVtRosqtEeHFL4",
@@ -11,14 +12,25 @@
  	 };
   	firebase.initializeApp(config);
   </script>
+
 	<title>Rijksmuseum: The Digital Experience</title>
+	
+	<!-- Linked  -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="javascript.js"></script>
+	<link href="animate.css" rel="stylesheet">
+
+	<!-- Web-applicatie meta-tags -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" href="IMG/rijkslogo.png">
+
+	<!-- Lettertypes -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 </head>
-</head>
-<body>
+
+<body class="animated slideInRight" id="main">
 <center><div class="final-announcement">
 		<a href="index.html">Dit waren alle vragen, linkje om terug te gaan naar index.</a>
 		<div id="amountCorrect"></div>
@@ -27,6 +39,11 @@
 			document.getElementById("amountCorrect").innerHTML = "Zoveel had je goed: "+localStorage.correctCounter;
 		</script>
 		<button type="button" onclick="saveScore()">Sla mijn score op</button>
+		<button type="button" onclick="scorebord()">Toon scorebord</button>
+		<div id="scorebord"></div>
+		<div id="BovenTable"></div>
+		<table id="myTable">
+		</table>
 </div></center>
 </body>
 </html>
