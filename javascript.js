@@ -25,7 +25,7 @@ function receiveData() {
 
 function progressLoad() {
 	var totalQuestions = 10;
-	var currentQuestion = 1;
+	var currentQuestion = localStorage.counter
 	var progressPercentage = currentQuestion / totalQuestions * 100;
 	document.getElementById("passed-questions").style.width = progressPercentage + "%";
 	document.getElementById("currentQuestion").innerHTML = currentQuestion;
@@ -64,11 +64,31 @@ function setAnswer(answer) {
 
 
 function nextquestion() {
-	window.location.href = 'template-nederlands.html'
+  	var data = null
+  	const dataObject = firebase.database().ref().child(localStorage.difficulty + '/0/Q' + localStorage.counter + '/0');
+  	dataObject.on('value', snap => {
+    data= snap.val();
+    if (data == null) {
+      window.location.href = 'final.html'
+	}
+	else {
+		window.location.href = 'template-nederlands.html'
+	}})
 
 }
 
 function answerCheck() {
+	var data = null
+	const dataObject = firebase.database().ref().child(localStorage.difficulty + '/0/Q' + localStorage.counter + '/0');
+	dataObject.on('value', snap => {
+  	data= snap.val();
+  	if (data == null) {
+		document.getElementById("nextquestion").innerHTML = "Einde";
+	  }
+	else {
+		document.getElementById("nextquestion").innerHTML = "Volgende vraag"
+	}
+	})
 	if (localStorage.currentAnswer == localStorage.correctAnswer) {
 		document.getElementById("result").innerHTML = "Je had het goed!"
 		newCorrectCounter = Number(Number(localStorage.correctCounter) +1);
@@ -146,3 +166,9 @@ function scorebord(data) {
 		}
 	})
 }		
+
+function new_counter() {
+	newCounter = Number(Number(localStorage.counter) + 1)
+    localStorage.setItem("counter", newCounter);
+    window.location.href  ="info.html"
+}

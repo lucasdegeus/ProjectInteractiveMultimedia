@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     
     <!-- Linked  -->
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="javascript.js"></script>
 	<link href="animate.css" rel="stylesheet">
@@ -16,17 +17,27 @@
 	<link rel="apple-touch-icon" href="IMG/rijkslogo.png">
 
 	<!-- Lettertypes -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+
+    	<!--Firebase-->
+	<script>
+        const config = {
+apiKey: "AIzaSyBSYQEzJnHMP4rexiPbMHVtRosqtEeHFL4",
+authDomain: "pim-project-b8698.firebaseapp.com",
+databaseURL: "https://pim-project-b8698.firebaseio.com",
+storageBucket: "pim-project-b8698.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+    
 </head>
 
 <body class="animated slideInRight" id="main" onload="answerCheck()">
     <div id="result">
-        Het goede antwoord is:
-        Mooi schilderij he?
     </div>
     <br>
-    <div id="infoblock">Laad hier vanuit de database info</div>
-    <button id="nextquestion" type="button" onclick="nextquestion()">Volgende vraag</button>
+    <div id="infoblock"></div>
+    <button id="nextquestion" type="button" onclick="nextquestion()"></button>
     
 </body>
 </html>

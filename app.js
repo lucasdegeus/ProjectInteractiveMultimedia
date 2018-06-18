@@ -22,8 +22,6 @@
     document.getElementById("answer4").innerHTML = data.A4;
     localStorage.setItem("info", data.info);
     localStorage.setItem("correctAnswer", data.correct);
-    newCounter = Number(Number(localStorage.counter) + 1)
-    localStorage.setItem("counter", newCounter);
   }
   })
 }());
