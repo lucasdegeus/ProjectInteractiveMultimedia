@@ -2,65 +2,52 @@
 <html>
 <head>
 	<title>Rijksmuseum: The Digital Experience</title>
-
-	<!-- Linked  -->
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="javascript.js"></script>
-	<link href="animate.css" rel="stylesheet">
-
-	<!-- Web-applicatie meta-tags -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" href="IMG/rijkslogo.png">
-
-	<!-- Lettertypes -->
+	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 
-	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
-	<script type="text/javascript" src="app.js"></script>
 </head>
-<body id="main" onload="receiveData()">
+</head>
+<body onload="receiveData()">
+<h3 id='container'></h3>
+<h3 id="question"></h3><br>
+<table id="questionform" align="center">
+	<tr>
+		<td class="wrapper-65">
+			<div class="mc-circle" id="a" onclick="setAnswer('a')">A</div>
+		</td>
+		<td><span id="answer1"></span><br></td>
+	</tr>
+	<tr>
+		<td class="wrapper-65">
+			<div class="mc-circle" id="b" onclick="setAnswer('b')">B</div>
+		</td>
+		<td><span id="answer2"></span><br></td>
+	</tr>
+	<tr>
+		<td class="wrapper-65">
+			<div class="mc-circle" id="c" onclick="setAnswer('c')">C</div>
+		</td>
+		<td><span id="answer3"></span><br></td>
+	</tr>
+	<tr>
+		<td class="wrapper-65">
+			<div class="mc-circle" id="d" onclick="setAnswer('d')">D</div>
+		</td>
+		<td><span id="answer4"></span><br></td>
+	</tr>
+</table>
 
-<div class="animated slideInRight">
-	<h3 id='container'></h3>
-	<h3 id="question"></h3><br>
-	<table id="questionform" align="center">
-		<tr onclick="setAnswer('a')">
-			<td class="wrapper-65">
-				<div class="mc-circle" id="a">A</div>
-			</td>
-			<td class="answerWrapper" id="answer-a"><span class="answerOption" id="answer1"></span><br></td>
-		</tr>
-		<tr onclick="setAnswer('b')">
-			<td class="wrapper-65">
-				<div class="mc-circle" id="b">B</div>
-			</td>
-			<td class="answerWrapper" id="answer-b"><span class="answerOption" id="answer2"></span><br></td>
-		</tr>
-		<tr onclick="setAnswer('c')">
-			<td class="wrapper-65">
-				<div class="mc-circle" id="c" onclick="setAnswer('c')">C</div>
-			</td>
-			<td class="answerWrapper" id="answer-c"><span class="answerOption" id="answer3"></span><br></td>
-		</tr>
-		<tr onclick="setAnswer('d')">
-			<td class="wrapper-65">
-				<div class="mc-circle" id="d">D</div>
-			</td>
-			<td class="answerWrapper" id="answer-d"><span class="answerOption" id="answer4"></span><br></td>
-		</tr>
-	</table>
+<!-- <form action="">
+	<input type="radio" name="question" value="a"><span id="answer1"></span><br>
+	<input type="radio" name="question" value="b"><span id="answer2"></span><br>
+	<input type="radio" name="question" value="c"><span id="answer3"></span><br>
+	<input type="radio" name="question" value="d"><span id="answer4"></span><br>
+</form> -->
 
-	<button id="info" type="button" onclick="javascript:location.href='info.html'">Bevestig antwoord</button>
-</div>
-<div class="bottomStatusBar">
-	<div id="progress-bar"> 
-		<div id="passed-questions">
-			<p id="currentQuestion"></p>
-		</div>
-		<p id="totalQuestions"></p>
-	</div>
-</div>
+<button id="info" type="button" onclick="javascript:location.href='info.html'">Bevestig antwoord</button>
 </body>
 </html>

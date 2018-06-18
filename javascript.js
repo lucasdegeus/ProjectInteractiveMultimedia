@@ -1,6 +1,7 @@
 var name = ""
 var difficulty = ""
 
+
 function startGame() {
 	if (document.getElementById('difficulty').value != "Moeilijkheidsgraad") {
 		localStorage.setItem("difficulty", document.getElementById("difficulty").value)
@@ -20,47 +21,22 @@ function difficulty_game(name,difficulty) {
 
 function receiveData() {
 	document.getElementById("container").innerHTML = "Welkom " + localStorage.nameplayer + '! Je hebt gekozen voor level: ' + localStorage.difficulty;
-	progressLoad();
 	}
 
-function progressLoad() {
-	console.log("dfgh");
-	var totalQuestions = 10;
-	var currentQuestion = 1;
-	var progressPercentage = currentQuestion / totalQuestions * 100;
-	document.getElementById("passed-questions").style.width = progressPercentage + "%";
-	document.getElementById("currentQuestion").innerHTML = currentQuestion;
-	document.getElementById("totalQuestions").innerHTML = totalQuestions;
-	document.getElementById("totalQuestions").style.paddingLeft = progressPercentage + "%";
-}
-
-function changeCircleBackgrounds(x) {
+function changeAllBackgrounds(x) {
     elements = document.getElementsByClassName(x);
     for (var i = 0; i < elements.length; i++) {
 		elements[i].style.backgroundColor="#FFF";
 		elements[i].style.color="#343A55";
-		elements[i].style.border = "none";
-    }
-}
-function removeBorders(x) {
-    elements = document.getElementsByClassName(x);
-    for (var i = 0; i < elements.length; i++) {
-		elements[i].style.border = "none";
     }
 }
 
 function setAnswer(answer) {
-	changeCircleBackgrounds('mc-circle');
-	removeBorders('answerWrapper');
+	changeAllBackgrounds('mc-circle');
 	document.getElementById('a').style.color = "#343A55";
 	document.getElementById(answer).style.backgroundColor = "#343A55";
-	document.getElementById(answer).style.border = "2px solid rgba(255, 255, 255, 0.2)";
 	document.getElementById(answer).style.color = "#fff";
 	localStorage.setItem("currentAnswer", answer);
-	
-	var selecteditem = 'answer-'+answer;
-	console.log(selecteditem);
-	document.getElementById(selecteditem).style.border = "2px solid rgba(255, 255, 255, 0.2)";
 }
 
 
@@ -82,6 +58,7 @@ function answerCheck() {
 }
 
 function saveScore() {
+<<<<<<< HEAD
 	var ydataObject = null
 	const newydataObject = firebase.database().ref().child('Players');
 	newydataObject.on('value', snap => {
@@ -100,6 +77,27 @@ function saveScore() {
   xdataObject.child(Number(localStorage.amountofplayers)+1).child("Name").set(localStorage.nameplayer)
   xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
 }	
+=======
+  	var ydataObject = null
+  	const newydataObject = firebase.database().ref().child('Players');
+  	newydataObject.on('value', snap => {
+  		amountofplayers = snap.val();
+  		countPlayers = 0
+  		for (i in amountofplayers) {
+  			countPlayers += 1;
+  		}
+  		localStorage.setItem('amountofplayers', countPlayers)
+  	})
+
+
+
+	var xdataObject = firebase.database().ref().child("Players");
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Score").set(localStorage.correctCounter)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Name").set(localStorage.nameplayer)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
+}
+
+>>>>>>> 6592af97e4852ba1a6c34c050c5034b77c6560ad
 		
 function scorebord(data) {
 	var head = document.createElement("THEAD");
@@ -144,4 +142,8 @@ function scorebord(data) {
 		}
 		}
 	})
+<<<<<<< HEAD
 }	
+=======
+}		
+>>>>>>> 6592af97e4852ba1a6c34c050c5034b77c6560ad
