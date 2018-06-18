@@ -1,7 +1,6 @@
 var name = ""
 var difficulty = ""
 
-
 function startGame() {
 	if (document.getElementById('difficulty').value != "Moeilijkheidsgraad") {
 		localStorage.setItem("difficulty", document.getElementById("difficulty").value)
@@ -21,22 +20,47 @@ function difficulty_game(name,difficulty) {
 
 function receiveData() {
 	document.getElementById("container").innerHTML = "Welkom " + localStorage.nameplayer + '! Je hebt gekozen voor level: ' + localStorage.difficulty;
+	progressLoad();
 	}
 
-function changeAllBackgrounds(x) {
+function progressLoad() {
+	console.log("dfgh");
+	var totalQuestions = 10;
+	var currentQuestion = 1;
+	var progressPercentage = currentQuestion / totalQuestions * 100;
+	document.getElementById("passed-questions").style.width = progressPercentage + "%";
+	document.getElementById("currentQuestion").innerHTML = currentQuestion;
+	document.getElementById("totalQuestions").innerHTML = totalQuestions;
+	document.getElementById("totalQuestions").style.paddingLeft = progressPercentage + "%";
+}
+
+function changeCircleBackgrounds(x) {
     elements = document.getElementsByClassName(x);
     for (var i = 0; i < elements.length; i++) {
 		elements[i].style.backgroundColor="#FFF";
 		elements[i].style.color="#343A55";
+		elements[i].style.border = "none";
+    }
+}
+function removeBorders(x) {
+    elements = document.getElementsByClassName(x);
+    for (var i = 0; i < elements.length; i++) {
+		elements[i].style.border = "none";
     }
 }
 
 function setAnswer(answer) {
-	changeAllBackgrounds('mc-circle');
+	changeCircleBackgrounds('mc-circle');
+	removeBorders('answerWrapper');
 	document.getElementById('a').style.color = "#343A55";
 	document.getElementById(answer).style.backgroundColor = "#343A55";
+	document.getElementById(answer).style.border = "2px solid rgba(255, 255, 255, 0.2)";
 	document.getElementById(answer).style.color = "#fff";
 	localStorage.setItem("currentAnswer", answer);
+	
+	var selecteditem = 'answer-'+answer;
+	console.log(selecteditem);
+	document.getElementById(selecteditem).style.border = "2px solid rgba(255, 255, 255, 0.2)";
 }
 
 
