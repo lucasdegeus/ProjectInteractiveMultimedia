@@ -58,7 +58,6 @@ function answerCheck() {
 }
 
 function saveScore() {
-<<<<<<< HEAD
 	var ydataObject = null
 	const newydataObject = firebase.database().ref().child('Players');
 	newydataObject.on('value', snap => {
@@ -77,27 +76,6 @@ function saveScore() {
   xdataObject.child(Number(localStorage.amountofplayers)+1).child("Name").set(localStorage.nameplayer)
   xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
 }	
-=======
-  	var ydataObject = null
-  	const newydataObject = firebase.database().ref().child('Players');
-  	newydataObject.on('value', snap => {
-  		amountofplayers = snap.val();
-  		countPlayers = 0
-  		for (i in amountofplayers) {
-  			countPlayers += 1;
-  		}
-  		localStorage.setItem('amountofplayers', countPlayers)
-  	})
-
-
-
-	var xdataObject = firebase.database().ref().child("Players");
-	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Score").set(localStorage.correctCounter)
-	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Name").set(localStorage.nameplayer)
-	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
-}
-
->>>>>>> 6592af97e4852ba1a6c34c050c5034b77c6560ad
 		
 function scorebord(data) {
 	var head = document.createElement("THEAD");
@@ -142,8 +120,4 @@ function scorebord(data) {
 		}
 		}
 	})
-<<<<<<< HEAD
 }	
-=======
-}		
->>>>>>> 6592af97e4852ba1a6c34c050c5034b77c6560ad
