@@ -12,7 +12,7 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background: linear-gradient(#515D97, #404750); }
+  background-color: #35416B; }
 
 /* line 39, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #mt-big {
@@ -70,8 +70,21 @@ h3 {
 .wrapper-65 {
   width: 65px; }
 
-/* line 91, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 92, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+.answerWrapper {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 50px !important; }
+  /* line 97, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+  .answerWrapper:hover {
+    background-color: #2b3558; }
+
+/* line 102, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 .mc-circle {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   background-color: #fff;
   border-radius: 100%;
   width: 55px;
@@ -79,15 +92,15 @@ h3 {
   vertical-align: middle;
   height: 55px;
   text-align: center; }
-  /* line 99, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+  /* line 113, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
   .mc-circle:hover {
-    background-color: #343A55;
-    color: #fff; }
+    background-color: #2b3558 !important;
+    color: #fff !important; }
 
-/* line 105, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 119, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #inputfields {
   text-align: center; }
-  /* line 107, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+  /* line 121, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
   #inputfields input, #inputfields select {
     font-family: 'Montserrat', sans-serif;
     text-align-last: center;
@@ -96,21 +109,21 @@ h3 {
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    background-color: #343A55;
+    background-color: #2b3558;
     border: none;
     font-size: 16px;
     color: white;
     margin-bottom: 15px;
     padding: 19px 0;
     font-weight: 500; }
-    /* line 122, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+    /* line 136, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
     #inputfields input::placeholder, #inputfields select::placeholder {
       color: #485170; }
-    /* line 125, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+    /* line 139, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
     #inputfields input:focus, #inputfields select:focus {
       outline: none; }
 
-/* line 131, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 145, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #inputfields button {
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
@@ -123,15 +136,15 @@ h3 {
   font-size: 19px;
   font-weight: 500;
   border-radius: 80px; }
-  /* line 143, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+  /* line 157, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
   #inputfields button:focus {
     outline: none; }
-  /* line 146, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+  /* line 160, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
   #inputfields button:hover {
-    background-color: #343A55;
+    background-color: #2b3558;
     color: #fff; }
 
-/* line 152, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 166, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #questionform img {
   margin-right: 3%;
   margin-bottom: 2%;
@@ -139,12 +152,12 @@ h3 {
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%); }
 
-/* line 160, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 174, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #questionform {
   text-align: center;
   width: 90%; }
 
-/* line 165, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 179, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #info, #nextquestion {
   font-family: 'Montserrat', sans-serif;
   font-size: 19px;
@@ -159,18 +172,18 @@ h3 {
   border-radius: 80px;
   border: none; }
   @media (min-width: 768px) {
-    /* line 165, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+    /* line 179, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
     #info, #nextquestion {
       width: 600px; } }
-  /* line 181, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+  /* line 195, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
   #info:focus, #nextquestion:focus {
     outline: none; }
-  /* line 184, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+  /* line 198, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
   #info:hover, #nextquestion:hover {
-    background-color: #343A55;
+    background-color: #2b3558;
     color: #fff; }
 
-/* line 190, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 204, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #result {
   font-family: 'Montserrat', sans-serif;
   font-size: 19px;
@@ -179,27 +192,27 @@ h3 {
   margin-top: 2%;
   color: white; }
 
-/* line 199, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 213, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #infoblock {
   font-family: 'Montserrat', sans-serif;
   font-size: 19px;
   font-weight: 500;
   text-align: center; }
 
-/* line 206, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 220, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 .answerOption {
   color: #fff;
   font-weight: 500; }
 
-/* line 211, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 225, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 .final-announcement {
   margin-top: 50px;
   color: #fff;
   font-weight: 500; }
-  /* line 212, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+  /* line 226, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
   .final-announcement a {
     color: #fff; }
-  /* line 218, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+  /* line 232, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
   .final-announcement button {
     font-family: 'Montserrat', sans-serif;
     background-color: #fff;
@@ -212,12 +225,62 @@ h3 {
     font-size: 19px;
     font-weight: 500;
     border-radius: 80px; }
-    /* line 230, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+    /* line 244, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
     .final-announcement button:focus {
       outline: none; }
-    /* line 233, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+    /* line 247, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
     .final-announcement button:hover {
-      background-color: #343A55;
+      background-color: #2b3558;
       color: #fff; }
+
+/* line 254, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+* {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+
+/* line 260, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+.bottomStatusBar {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  padding: 30px 0 20px 0;
+  position: absolute;
+  bottom: 0; }
+
+/* line 268, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+#progress-bar {
+  font-family: 'Montserrat', sans-serif;
+  margin: auto;
+  background-color: #F6DFB7;
+  border-radius: 100px;
+  height: 20px;
+  width: 80%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+
+/* line 280, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+#passed-questions {
+  background-color: #E7788B;
+  border-radius: 100px;
+  height: 20px;
+  height: 20px;
+  width: 0%; }
+
+/* line 287, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+#currentQuestion {
+  text-align: center;
+  color: #F6DFB7; }
+
+/* line 291, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+#totalQuestions {
+  margin: auto;
+  padding-left: 40%;
+  width: 10%;
+  margin-top: -19px;
+  color: #E7788B; }
 
 /*# sourceMappingURL=../css/style.map */

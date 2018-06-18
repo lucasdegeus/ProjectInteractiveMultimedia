@@ -10,11 +10,11 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: linear-gradient(#515D97, #404750);
+    background-color: #35416B;
 }
 
 //Vaak gebruikte kleuren
-$dark-blue: #343A55;
+$dark-blue: #2b3558;
 $light-blue: #485170;
 
 // Responsive breakpoints
@@ -88,7 +88,21 @@ h3 {
 .wrapper-65 {
 	width: 65px;
 }
+
+.answerWrapper {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border-radius: 50px !important;
+	&:hover {
+		background-color: $dark-blue;
+	}
+}
+
 .mc-circle {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 	background-color: #fff;
     border-radius: 100%;
     width: 55px;
@@ -97,8 +111,8 @@ h3 {
     height: 55px;
 	text-align: center;
 	&:hover {
-		background-color: $dark-blue;
-		color: #fff;
+		background-color: $dark-blue !important;
+		color: #fff !important;
 	}
 }
 
@@ -235,4 +249,49 @@ h3 {
 			color: #fff;
 		}
 	}
+}
+
+* {
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+.bottomStatusBar {
+	width: 100%;
+	height: 60px;
+    background-color: #fff;
+    padding: 30px 0 20px 0;
+	position: absolute;
+    bottom: 0;
+}
+#progress-bar {
+	font-family: 'Montserrat', sans-serif;
+	margin: auto;
+	background-color: #F6DFB7;
+	border-radius: 100px;
+	height: 20px;
+	width: 80%;
+	 -webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+#passed-questions {
+	background-color: #E7788B;
+	border-radius: 100px;
+	height: 20px;
+	height: 20px;
+	width: 0%;
+}
+#currentQuestion {
+	text-align: center;
+	color: #F6DFB7;
+}
+#totalQuestions {
+	margin: auto;
+	padding-left: 40%;
+	width: 10%;
+	margin-top: -19px;
+	color: #E7788B;
 }
