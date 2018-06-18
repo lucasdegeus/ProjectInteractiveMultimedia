@@ -120,4 +120,9 @@ function scorebord(data) {
 		}
 		}
 	})
+<<<<<<< HEAD
 }	
+=======
+}		
+
+>>>>>>> cf1a3493b72741d94deb3228e4618aa051c59c94
