@@ -12,7 +12,7 @@ function startGame() {
 	}
 	localStorage.setItem("counter", Number(1))
 	localStorage.setItem("correctCounter", Number(0))
-}
+} 
 
 function difficulty_game(name,difficulty) {
 	window.location.href = 'template-nederlands.html?' + name + "," + difficulty;
@@ -24,7 +24,6 @@ function receiveData() {
 	}
 
 function progressLoad() {
-	console.log("dfgh");
 	var totalQuestions = 10;
 	var currentQuestion = 1;
 	var progressPercentage = currentQuestion / totalQuestions * 100;
@@ -81,15 +80,18 @@ function answerCheck() {
 	document.getElementById("infoblock").innerHTML = localStorage.info
 }
 
+
 function saveScore() {
-  	var data = null
-  	const dataObject = firebase.database().ref().child('Players/amountofplayers');
-  	dataObject.on('value', snap => {
-    localStorage.setItem("amountofplayers", snap.val());
-    })
-
-
-  	//hier begint post
+  	var ydataObject = null
+  	const newydataObject = firebase.database().ref().child('Players');
+  	newydataObject.on('value', snap => {
+  		amountofplayers = snap.val();
+  		countPlayers = 0
+  		for (i in amountofplayers) {
+  			countPlayers += 1;
+  		}
+  		localStorage.setItem('amountofplayers', countPlayers)
+  	})
 
 
 
@@ -97,5 +99,50 @@ function saveScore() {
 	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Score").set(localStorage.correctCounter)
 	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Name").set(localStorage.nameplayer)
 	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
-	xdataObject.child('amountofplayers').set(Number(localStorage.amountofplayers)+1);
 }
+
+		
+function scorebord(data) {
+	var head = document.createElement("THEAD");
+	head.setAttribute("id", "TableHead");
+	document.getElementById("myTable").appendChild(head);
+	
+    var y = document.createElement("TR");
+    y.setAttribute("id", "myTr");
+    document.getElementById("TableHead").appendChild(y);
+	
+	var body = document.createElement("TBODY");
+	body.setAttribute("id", "TableBody");
+	document.getElementById("myTable").appendChild(body);
+	
+	var foot = document.createElement("TFOOT");
+	foot.setAttribute("id", "TableFoot");
+	document.getElementById("myTable").appendChild(foot);
+
+	var table = document.getElementById("myTable")
+	var header = table.createTHead();
+	var row = header.insertRow(0);
+	var trName = row.insertCell(0);
+	var trScore = row.insertCell(1);
+	trName.innerHTML = "Naam"
+	trScore.innerHTML = "Score"
+
+
+	/*hier begint data uit API toevoegen*/
+	var scoreData = null
+	const newData = firebase.database().ref().child('Players');
+	newData.on('value', snap => {
+		scoreData = snap.val();
+		document.getElementById("BovenTable").innerHTML = localStorage.difficulty
+		for (i in scoreData) {
+			if (scoreData[i].Difficulty == localStorage.difficulty) {
+			var table = document.getElementById("TableBody");
+			var row = table.insertRow(-1);
+			var firstCell = row.insertCell(0)
+			var secondCell = row.insertCell(1);
+			firstCell.innerHTML = scoreData[i].Name;
+			secondCell.innerHTML = scoreData[i].Score
+		}
+		}
+	})
+}		
