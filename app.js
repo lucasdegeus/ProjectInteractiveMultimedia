@@ -7,7 +7,7 @@
   };
   firebase.initializeApp(config);
   var data = null
-  const dataObject = firebase.database().ref().child(localStorage.difficulty + '/0/Q' + localStorage.counter + '/0');
+  const dataObject = firebase.database().ref().child(localStorage.difficulty + '/Q' + localStorage.counter);
   dataObject.on('value', snap => {
     data= snap.val();
     if (data == null) {
@@ -20,6 +20,12 @@
     document.getElementById("answer2").innerHTML = data.A2;
     document.getElementById("answer3").innerHTML = data.A3
     document.getElementById("answer4").innerHTML = data.A4;
+    var routeData = data.route;
+    var route = routeData.split("BREAK");
+    var i = 0;
+    for (i in route) {
+      document.getElementById("routebeschrijving").innerHTML += (route[i]) + "<br>";
+    };
     localStorage.setItem("info", data.info);
     localStorage.setItem("correctAnswer", data.correct);
   }

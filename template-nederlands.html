@@ -39,7 +39,13 @@
 
 <div class="animated slideInRight">
 	<h3 id='container'></h3>
-	<button id='route' onclick="javascript:location.href='route.html'">Routebeschrijving</button>
+	<button id='route' onclick="showRoutebeschrijving()">Routebeschrijving</button>
+	<div id="routebeschrijving">
+	</div>
+	<script>
+		var x = document.getElementById("routebeschrijving");
+		x.style.display = "none";
+	</script>
 	<h3 id="question"></h3><br>
 	<table id="questionform" align="center">
 		<tr onclick="setAnswer('a')">
