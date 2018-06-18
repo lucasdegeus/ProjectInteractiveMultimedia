@@ -176,7 +176,7 @@ h3 {
 	width: 90%;
 }
 
-#info, #nextquestion, #backtoQ {
+#info, #nextquestion, #backtoQ, #worker {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 19px;
     font-weight: 500;
@@ -335,4 +335,30 @@ h1 {
 	text-align: center;
 	color: white;
 	position: center;
+}
+
+#inputfields_workers {
+	text-align:center;
+	input, select {
+		font-family: 'Montserrat', sans-serif;
+		text-align-last: center;
+		width: 70%;
+		text-align: center;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		background-color: $dark-blue;
+		border: none;
+		font-size: 16px;
+		color: white;
+		margin-bottom: 15px;
+		padding: 19px 0;
+		font-weight: 500;
+		&::placeholder {
+			color: $light-blue;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
 }

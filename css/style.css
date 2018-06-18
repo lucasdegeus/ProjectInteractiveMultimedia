@@ -197,7 +197,7 @@ h3 {
 }
 
 /* line 179, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
-#info, #nextquestion, #backtoQ {
+#info, #nextquestion, #backtoQ, #worker {
   font-family: 'Montserrat', sans-serif;
   font-size: 19px;
   font-weight: 500;
@@ -214,18 +214,18 @@ h3 {
 
 @media (min-width: 768px) {
   /* line 179, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
-  #info, #nextquestion, #backtoQ {
+  #info, #nextquestion, #backtoQ, #worker {
     width: 600px;
   }
 }
 
 /* line 195, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
-#info:focus, #nextquestion:focus, #backtoQ:focus {
+#info:focus, #nextquestion:focus, #backtoQ:focus, #worker:focus {
   outline: none;
 }
 
 /* line 198, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
-#info:hover, #nextquestion:hover, #backtoQ:hover {
+#info:hover, #nextquestion:hover, #backtoQ:hover, #worker:hover {
   background-color: #2b3558;
   color: #fff;
 }
@@ -388,6 +388,39 @@ h1 {
   text-align: center;
   color: white;
   position: center;
+}
+
+/* line 340, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields_workers {
+  text-align: center;
+}
+
+/* line 342, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields_workers input, #inputfields_workers select {
+  font-family: 'Montserrat', sans-serif;
+  text-align-last: center;
+  width: 70%;
+  text-align: center;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #2b3558;
+  border: none;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 15px;
+  padding: 19px 0;
+  font-weight: 500;
+}
+
+/* line 357, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields_workers input::placeholder, #inputfields_workers select::placeholder {
+  color: #485170;
+}
+
+/* line 360, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields_workers input:focus, #inputfields_workers select:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=../css/style.map */
