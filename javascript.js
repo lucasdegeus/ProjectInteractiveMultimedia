@@ -1,7 +1,6 @@
 var name = ""
 var difficulty = ""
 
-
 function startGame() {
 	if (document.getElementById('difficulty').value != "Moeilijkheidsgraad") {
 		localStorage.setItem("difficulty", document.getElementById("difficulty").value)
@@ -21,22 +20,47 @@ function difficulty_game(name,difficulty) {
 
 function receiveData() {
 	document.getElementById("container").innerHTML = "Welkom " + localStorage.nameplayer + '! Je hebt gekozen voor level: ' + localStorage.difficulty;
+	progressLoad();
 	}
 
-function changeAllBackgrounds(x) {
+function progressLoad() {
+	console.log("dfgh");
+	var totalQuestions = 10;
+	var currentQuestion = 1;
+	var progressPercentage = currentQuestion / totalQuestions * 100;
+	document.getElementById("passed-questions").style.width = progressPercentage + "%";
+	document.getElementById("currentQuestion").innerHTML = currentQuestion;
+	document.getElementById("totalQuestions").innerHTML = totalQuestions;
+	document.getElementById("totalQuestions").style.paddingLeft = progressPercentage + "%";
+}
+
+function changeCircleBackgrounds(x) {
     elements = document.getElementsByClassName(x);
     for (var i = 0; i < elements.length; i++) {
 		elements[i].style.backgroundColor="#FFF";
 		elements[i].style.color="#343A55";
+		elements[i].style.border = "none";
+    }
+}
+function removeBorders(x) {
+    elements = document.getElementsByClassName(x);
+    for (var i = 0; i < elements.length; i++) {
+		elements[i].style.border = "none";
     }
 }
 
 function setAnswer(answer) {
-	changeAllBackgrounds('mc-circle');
+	changeCircleBackgrounds('mc-circle');
+	removeBorders('answerWrapper');
 	document.getElementById('a').style.color = "#343A55";
 	document.getElementById(answer).style.backgroundColor = "#343A55";
+	document.getElementById(answer).style.border = "2px solid rgba(255, 255, 255, 0.2)";
 	document.getElementById(answer).style.color = "#fff";
 	localStorage.setItem("currentAnswer", answer);
+	
+	var selecteditem = 'answer-'+answer;
+	console.log(selecteditem);
+	document.getElementById(selecteditem).style.border = "2px solid rgba(255, 255, 255, 0.2)";
 }
 
 
@@ -58,71 +82,20 @@ function answerCheck() {
 }
 
 function saveScore() {
-	var ydataObject = null
-	const newydataObject = firebase.database().ref().child('Players');
-	newydataObject.on('value', snap => {
-		amountofplayers = snap.val();
-		countPlayers = 0
-		for (i in amountofplayers) {
-			countPlayers += 1;
-		}
-		localStorage.setItem('amountofplayers', countPlayers)
-	})
+  	var data = null
+  	const dataObject = firebase.database().ref().child('Players/amountofplayers');
+  	dataObject.on('value', snap => {
+    localStorage.setItem("amountofplayers", snap.val());
+    })
+
+
+  	//hier begint post
 
 
 
-  var xdataObject = firebase.database().ref().child("Players");
-  xdataObject.child(Number(localStorage.amountofplayers)+1).child("Score").set(localStorage.correctCounter)
-  xdataObject.child(Number(localStorage.amountofplayers)+1).child("Name").set(localStorage.nameplayer)
-  xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
-}	
-		
-function scorebord(data) {
-	var head = document.createElement("THEAD");
-	head.setAttribute("id", "TableHead");
-	document.getElementById("myTable").appendChild(head);
-	
-    var y = document.createElement("TR");
-    y.setAttribute("id", "myTr");
-    document.getElementById("TableHead").appendChild(y);
-	
-	var body = document.createElement("TBODY");
-	body.setAttribute("id", "TableBody");
-	document.getElementById("myTable").appendChild(body);
-	
-	var foot = document.createElement("TFOOT");
-	foot.setAttribute("id", "TableFoot");
-	document.getElementById("myTable").appendChild(foot);
-
-	var table = document.getElementById("myTable")
-	var header = table.createTHead();
-	var row = header.insertRow(0);
-	var trName = row.insertCell(0);
-	var trScore = row.insertCell(1);
-	trName.innerHTML = "Naam"
-	trScore.innerHTML = "Score"
-
-
-	/*hier begint data uit API toevoegen*/
-	var scoreData = null
-	const newData = firebase.database().ref().child('Players');
-	newData.on('value', snap => {
-		scoreData = snap.val();
-		document.getElementById("BovenTable").innerHTML = localStorage.difficulty
-		for (i in scoreData) {
-			if (scoreData[i].Difficulty == localStorage.difficulty) {
-			var table = document.getElementById("TableBody");
-			var row = table.insertRow(-1);
-			var firstCell = row.insertCell(0)
-			var secondCell = row.insertCell(1);
-			firstCell.innerHTML = scoreData[i].Name;
-			secondCell.innerHTML = scoreData[i].Score
-		}
-		}
-	})
-<<<<<<< HEAD
-}	
-=======
-}		
-
->>>>>>> cf1a3493b72741d94deb3228e4618aa051c59c94
+	var xdataObject = firebase.database().ref().child("Players");
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Score").set(localStorage.correctCounter)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Name").set(localStorage.nameplayer)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
+	xdataObject.child('amountofplayers').set(Number(localStorage.amountofplayers)+1);
+}
