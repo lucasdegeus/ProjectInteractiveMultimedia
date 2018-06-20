@@ -180,7 +180,7 @@ h3 {
 	width: 90%;
 }
 
-#info-button, #nextquestion, #backtoQ, #worker {
+#info-button, #nextquestion, #backtoQ, #worker, #addQ {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 19px;
     font-weight: 500;
@@ -223,6 +223,7 @@ h3 {
 
 .answerOption{
 	color: #fff;
+	margin-left: -70px;
 	font-weight: 500;
 }
 
@@ -301,6 +302,10 @@ h3 {
 	color: #E7788B;
 }
 #routeWrapper {
+	-webkit-transition: all 0s ease;
+	-moz-transition: all 0s ease;
+	-o-transition: all 0s ease;
+	transition: all 0s ease;
 	position: absolute;
     height: 100vh;
     width: 100%;
