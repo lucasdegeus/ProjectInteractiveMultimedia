@@ -227,7 +227,6 @@ h3 {
 }
 
 .answerOption{
-	float: left;
     color: #fff;
     margin-left: 0px;
     font-weight: 500;
@@ -275,7 +274,7 @@ h3 {
 	height: 30px;
 	background-color: #2d375a;
     padding: 1px 0 20px 0;
-	position: absolute;
+	margin-top: 20px;
     bottom: 0;
 }
 #progress-bar {
