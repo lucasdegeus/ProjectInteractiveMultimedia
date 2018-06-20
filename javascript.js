@@ -5,7 +5,8 @@ function startGame() {
 	if (document.getElementById('difficulty').value != "Moeilijkheidsgraad") {
 		localStorage.setItem("difficulty", document.getElementById("difficulty").value)
 		localStorage.setItem("nameplayer", document.getElementById("nameplayer").value)
-		difficulty_game(document.getElementById('nameplayer').value, document.getElementById('difficulty').value)
+		localStorage.setItem("firstLoad", "true");
+		window.location.href = 'template-nederlands.html'
 	}
 	else {
 		alert('Kies een Moeilijkheidsgraad')
@@ -14,12 +15,21 @@ function startGame() {
 	localStorage.setItem("correctCounter", Number(0))
 } 
 
-function difficulty_game(name,difficulty) {
-	window.location.href = 'template-nederlands.html?' + name + "," + difficulty;
-}
-
 function receiveData() {
-	document.getElementById("container").innerHTML = "Welkom " + localStorage.nameplayer + '! Je hebt gekozen voor level: ' + localStorage.difficulty;
+	var languageDifficulty = ""
+	if (localStorage.difficulty == "EasyQ") {
+		languageDifficulty = "makkelijk"
+	}
+	if (localStorage.difficulty == "MediumQ") {
+		languageDifficulty = "normaal"
+	}
+	if (localStorage.difficulty == "HardQ") {
+		languageDifficulty = "moeilijk"
+	}
+	if (localStorage.firstLoad == "true") {
+		document.getElementById("container").innerHTML = "Welkom " + localStorage.nameplayer + '! Je hebt gekozen voor level: ' + languageDifficulty;
+		localStorage.setItem("firstLoad", "false");
+	}
 	progressLoad();
 	}
 
@@ -114,11 +124,18 @@ function saveScore() {
   	})
 
 
-
+	var d = new Date();
+	alert(d)
+	currentMonth = d.getMonth();
+	currentDay = d.getDate();
+	currentYear = d.getFullYear();
 	var xdataObject = firebase.database().ref().child("Players");
 	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Score").set(localStorage.correctCounter)
 	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Name").set(localStorage.nameplayer)
 	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Day").set(currentDay)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Month").set(currentMonth)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Year").set(currentYear)
 }
 
 		
