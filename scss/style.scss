@@ -12,7 +12,9 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #35416B;
+	background-color: #35416B;
+	overflow-x: hidden;
+    max-width: 100%;
 }
 
 //Vaak gebruikte kleuren
@@ -178,7 +180,7 @@ h3 {
 	width: 90%;
 }
 
-#info, #nextquestion, #backtoQ, #worker {
+#info-button, #nextquestion, #backtoQ, #worker {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 19px;
     font-weight: 500;
@@ -298,12 +300,17 @@ h3 {
 	margin-top: -19px;
 	color: #E7788B;
 }
-
+#routeWrapper {
+	position: absolute;
+    height: 100vh;
+    width: 100%;
+	top: -18px;
+	background-color: $dark-blue;
+}
 #routebeschrijving { 
 	text-align: center;
 	color: #fff;
-	background-color: $dark-blue;
-	padding: 20px 0;
+	padding: 20px;
 	margin-top: 20px;
 }
 #route {
@@ -321,6 +328,26 @@ h3 {
 	@include bp(M768) {
 		width: 600px;
 	}
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background-color: $dark-blue;
+		color: #fff;
+	}
+}
+#close-route {
+	margin: auto;
+	background-color: #fff;
+	color: $light-blue;
+	border: 5px solid #3b4773;
+	width:60%;
+	text-align:center;
+	padding: 10px;
+	margin-top: 20px;
+	font-size: 19px;
+	font-weight: 500;
+	border-radius: 80px;
 	&:focus {
 		outline: none;
 	}

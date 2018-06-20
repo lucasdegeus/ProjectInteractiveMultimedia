@@ -42,10 +42,13 @@
 <div class="animated slideInRight">
 	<h3 id='container'></h3>
 	<button id='route' onclick="showRoutebeschrijving()">Routebeschrijving</button>
-	<div id="routebeschrijving">
+	<div class"animated slideInDown" id="routeWrapper">		
+		<div id="routebeschrijving">
+		</div>
+		<div id="close-route" onclick="hideRoutebeschrijving()">Ik ben er</div>
 	</div>
 	<script>
-		var x = document.getElementById("routebeschrijving");
+		var x = document.getElementById("routeWrapper");
 		x.style.display = "none";
 	</script>
 	<h3 id="question"></h3><br>
@@ -75,7 +78,7 @@
 			<td class="answerWrapper" id="answer-d"><span class="answerOption" id="answer4"></span><br></td>
 		</tr>
 	</table>
-	<button id="info" type="button" onclick="new_counter()">Bevestig antwoord</button>
+	<button id="info-button" type="button" onclick="new_counter()">Bevestig antwoord</button>
 </div>
 <div class="bottomStatusBar">
 	<div id="progress-bar"> 

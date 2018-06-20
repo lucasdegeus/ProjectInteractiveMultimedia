@@ -174,13 +174,20 @@ function new_counter() {
 }
 
 function showRoutebeschrijving() {
-	var x = document.getElementById("routebeschrijving");
+	var x = document.getElementById("routeWrapper");
 	if (x.style.display ==="none") {
 		x.style.display = "block";
 	}
 		else {
 			x.style.display = "none";
 		}
+}
+
+function hideRoutebeschrijving() {
+	var closeRoute = document.getElementById("routeWrapper");
+	if (closeRoute.style.display ==="block") {
+		closeRoute.style.display = "none";
+	}
 }
 
 function submitQuestion() {
