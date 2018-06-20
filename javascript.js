@@ -18,7 +18,19 @@ function startGame() {
 	}
 	localStorage.setItem("counter", Number(1))
 	localStorage.setItem("correctCounter", Number(0))
-} 
+
+	var ydataObject = null
+	var submitDifficulty = document.getElementById("difficulty").value;
+	const newydataObject = firebase.database().ref().child(submitDifficulty);
+	newydataObject.on('value', snap => {
+		amountofquestions = snap.val();
+		countQuestion = 0
+		for (i in amountofquestions) {
+			countQuestion += 1;
+		}
+		localStorage.setItem('amountofquestions', countQuestion)
+	})
+}
 
 function receiveData() {
 	//reset antwoord naar leeg, anders kunnen mensen geen antwoord invoeren en wordt het vorige antwoord gebruikt
@@ -41,7 +53,7 @@ function receiveData() {
 	}
 
 function progressLoad() {
-	var totalQuestions = 10;
+	var totalQuestions = localStorage.amountofquestions
 	var currentQuestion = localStorage.counter
 	var progressPercentage = currentQuestion / totalQuestions * 100;
 	document.getElementById("passed-questions").style.width = progressPercentage + "%";
