@@ -118,7 +118,7 @@ h3 {
 	}
 }
 
-#inputfields {
+#inputfields, #scorebord {
 	text-align:center;
 	input, select {
 		font-family: 'Montserrat', sans-serif;
@@ -178,7 +178,7 @@ h3 {
 	width: 90%;
 }
 
-#info, #nextquestion, #backtoQ, #worker {
+#info, #nextquestion, #backtoQ, #worker, #addQ {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 19px;
     font-weight: 500;
