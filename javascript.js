@@ -190,22 +190,31 @@ function new_counter() {
 	window.location.href  ="info.html"
 }
 
-function showRoutebeschrijving() {
-	var x = document.getElementById("routeWrapper");
-	if (x.style.display ==="none") {
-		x.style.display = "block";
-	}
-		else {
-			x.style.display = "none";
-		}
-}
+// function showRoutebeschrijving() {
+// 	var x = document.getElementById("routeWrapper");
+// 	if (x.style.display ==="none") {
+// 		x.style.display = "block";
+// 	}
+// 		else {
+// 			x.style.display = "none";
+// 		}
+// }
 
-function hideRoutebeschrijving() {
-	var closeRoute = document.getElementById("routeWrapper");
-	if (closeRoute.style.display ==="block") {
-		closeRoute.style.display = "none";
-	}
-}
+$(document).ready(function(){
+	$("#route").click(function(){
+		$("#routeWrapper").slideDown(400);
+	});
+	$("#close-route").click(function(){
+		$("#routeWrapper").slideUp(400);
+	});
+});
+
+// function hideRoutebeschrijving() {
+// 	var closeRoute = document.getElementById("routeWrapper");
+// 	if (closeRoute.style.display ==="block") {
+// 		closeRoute.style.display = "none";
+// 	}
+// }
 
 function submitQuestion() {
 	//document.getElementById("vraag").value
