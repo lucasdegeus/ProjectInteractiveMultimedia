@@ -170,7 +170,6 @@ function scorebord(data) {
 	const newData = firebase.database().ref().child('Players');
 	newData.on('value', snap => {
 		scoreData = snap.val();
-		document.getElementById("BovenTable").innerHTML = localStorage.difficulty
 		for (i in scoreData) {
 			if (scoreData[i].Difficulty == localStorage.difficulty) {
 			var table = document.getElementById("TableBody");
@@ -233,4 +232,27 @@ function submitQuestion() {
   xdataObject.child("Q" + newChild).child("correct").set(document.getElementById("correct").value)
   xdataObject.child("Q" + newChild).child("info").set(document.getElementById("info").value)
   xdataObject.child("Q" + newChild).child("route").set(document.getElementById("route").value)
+}
+
+function setScorebord(time) {
+	changeCircleBackgrounds('mc-circle');
+	removeBorders('answerWrapper');
+	document.getElementById('day').style.color = "#343A55";
+	document.getElementById(time).style.backgroundColor = "#343A55";
+	document.getElementById(time).style.border = "2px solid rgba(255, 255, 255, 0.2)";
+	document.getElementById(time).style.color = "#fff";
+	localStorage.setItem("currentAnswer", time);
+	
+	var selecteditem = 'time-'+time;
+	console.log(selecteditem);
+	document.getElementById(selecteditem).style.border = "2px solid rgba(255, 255, 255, 0.2)";
+
+	if (currentAnswer == 'day')
+		show(dailyplayers)
+	else if (currentAnswer == 'week')
+		show(weeklyplayers)
+	else if (currentAnwer == 'month')
+		show(monthlyplayers)
+	else
+		show(yearplayers)
 }

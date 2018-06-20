@@ -1,1 +1,487 @@
-html{height:100%;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;font-smoothing:antialiased;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none}body{font-family:'Montserrat', sans-serif;margin:0;background-repeat:no-repeat;background-attachment:fixed;background-color:#35416B;overflow-x:hidden;max-width:100%}#mt-big{margin-top:40px}#mt-medium{margin-top:30px}#mt-small{margin-top:20px}#mt-xs{margin-top:10px}#header{margin-top:40px;text-align:center}#header #logo{width:70%}@media (min-width: 768px){#header #logo{width:600px}}#header #subtext{color:white;text-align:center;font-weight:400;font-size:14px;margin-top:5px}h3{padding-top:10px;color:white;text-align:center;font-size:18px;font-weight:500}#flags{text-align:center}#flags img{width:100px;margin:20px;border-radius:20px}.wrapper-65{width:65px}.answerWrapper{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-radius:50px !important}.answerWrapper:hover{background-color:#2b3558}.mc-circle{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;background-color:#fff;border-radius:100%;width:55px;display:table-cell;vertical-align:middle;height:55px;text-align:center}.mc-circle:hover{background-color:#2b3558 !important;color:#fff !important}#inputfields,#scorebord{text-align:center}#inputfields input,#inputfields select,#scorebord input,#scorebord select{font-family:'Montserrat', sans-serif;text-align-last:center;width:70%;text-align:center;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;background-color:#2b3558;border:none;font-size:16px;color:white;margin-bottom:15px;padding:19px 0;font-weight:500}#inputfields input::placeholder,#inputfields select::placeholder,#scorebord input::placeholder,#scorebord select::placeholder{color:#485170}#inputfields input:focus,#inputfields select:focus,#scorebord input:focus,#scorebord select:focus{outline:none}#inputfields button{font-family:'Montserrat', sans-serif;background-color:#fff;color:#485170;border:none;width:70%;text-align:center;padding:20px;margin-top:20px;font-size:19px;font-weight:500;border-radius:80px}#inputfields button:focus{outline:none}#inputfields button:hover{background-color:#2b3558;color:#fff}#questionform img{margin-right:3%;margin-bottom:2%;width:7%;-webkit-clip-path:circle(50% at 50% 50%);clip-path:circle(50% at 50% 50%)}#questionform{text-align:center;width:90%}#info-button,#nextquestion,#backtoQ,#worker{font-family:'Montserrat', sans-serif;font-size:19px;font-weight:500;margin-top:50px !important;font-weight:500 !important;width:70%;text-align:center;padding:20px;margin:auto;display:block;border-radius:80px;border:none}@media (min-width: 768px){#info-button,#nextquestion,#backtoQ,#worker{width:600px}}#info-button:focus,#nextquestion:focus,#backtoQ:focus,#worker:focus{outline:none}#info-button:hover,#nextquestion:hover,#backtoQ:hover,#worker:hover{background-color:#2b3558;color:#fff}#result{font-family:'Montserrat', sans-serif;font-size:19px;font-weight:500;text-align:center;margin-top:2%;color:white}#infoblock{font-family:'Montserrat', sans-serif;font-size:19px;font-weight:500;text-align:center}.answerOption{color:#fff;font-weight:500}.final-announcement{margin-top:50px;color:#fff;font-weight:500}.final-announcement a{color:#fff}.final-announcement button{font-family:'Montserrat', sans-serif;background-color:#fff;color:#485170;border:none;width:70%;text-align:center;padding:20px;margin-top:20px;font-size:19px;font-weight:500;border-radius:80px}.final-announcement button:focus{outline:none}.final-announcement button:hover{background-color:#2b3558;color:#fff}button{background-color:#fff}*{-webkit-transition:all 0.4s ease;-moz-transition:all 0.4s ease;-o-transition:all 0.4s ease;transition:all 0.4s ease}.bottomStatusBar{width:100%;height:30px;background-color:#2d375a;padding:1px 0 20px 0;position:absolute;bottom:0}#progress-bar{font-family:'Montserrat', sans-serif;margin:auto;background-color:#F6DFB7;border-radius:100px;height:20px;width:80%;-webkit-transition:all 0.4s ease;-moz-transition:all 0.4s ease;-o-transition:all 0.4s ease;transition:all 0.4s ease}#passed-questions{background-color:#E7788B;border-radius:100px;height:20px;width:0%}#currentQuestion{text-align:center;color:#F6DFB7}#totalQuestions{margin:auto;padding-left:40%;width:10%;margin-top:-19px;color:#E7788B}#routeWrapper{position:absolute;height:100vh;width:100%;top:-18px;background-color:#2b3558}#routebeschrijving{text-align:center;color:#fff;padding:20px;margin-top:20px}#route{font-family:'Montserrat', sans-serif;font-size:19px;font-weight:500;font-weight:500 !important;width:70%;text-align:center;padding:10px;margin:auto;display:block;border-radius:80px;border:none}@media (min-width: 768px){#route{width:600px}}#route:focus{outline:none}#route:hover{background-color:#2b3558;color:#fff}#close-route{margin:auto;background-color:#fff;color:#485170;border:5px solid #3b4773;width:60%;text-align:center;padding:10px;margin-top:20px;font-size:19px;font-weight:500;border-radius:80px}#close-route:focus{outline:none}#close-route:hover{background-color:#2b3558;color:#fff}h1{font-family:'Montserrat', sans-serif;font-size:30px;font-weight:500;text-align:center;color:white;margin-top:2%}#loopinstructies{font-family:'Montserrat', sans-serif;font-size:20px;font-weight:500;text-align:center;color:white;position:center}#inputfields_workers{text-align:center}#inputfields_workers input,#inputfields_workers select{font-family:'Montserrat', sans-serif;text-align-last:center;width:70%;text-align:center;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;background-color:#2b3558;border:none;font-size:16px;color:white;margin-bottom:15px;padding:19px 0;font-weight:500}#inputfields_workers input::placeholder,#inputfields_workers select::placeholder{color:#485170}#inputfields_workers input:focus,#inputfields_workers select:focus{outline:none}
+/* line 1, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+html {
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+/* line 10, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #35416B;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* line 43, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#mt-big {
+  margin-top: 40px;
+}
+
+/* line 46, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#mt-medium {
+  margin-top: 30px;
+}
+
+/* line 49, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#mt-small {
+  margin-top: 20px;
+}
+
+/* line 52, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#mt-xs {
+  margin-top: 10px;
+}
+
+/* line 56, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#header {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* line 59, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#header #logo {
+  width: 70%;
+}
+
+@media (min-width: 768px) {
+  /* line 59, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+  #header #logo {
+    width: 600px;
+  }
+}
+
+/* line 65, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#header #subtext {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* line 74, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+h3 {
+  padding-top: 10px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* line 83, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#flags {
+  text-align: center;
+}
+
+/* line 85, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#flags img {
+  width: 100px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+/* line 92, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.wrapper-65 {
+  width: 65px;
+}
+
+/* line 96, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.answerWrapper {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 50px !important;
+}
+
+/* line 101, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.answerWrapper:hover {
+  background-color: #2b3558;
+}
+
+/* line 106, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.mc-circle {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 100%;
+  width: 55px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 55px;
+  text-align: center;
+}
+
+/* line 117, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.mc-circle:hover {
+  background-color: #2b3558 !important;
+  color: #fff !important;
+}
+
+/* line 123, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields, #scorebord {
+  text-align: center;
+}
+
+/* line 125, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields input, #inputfields select, #scorebord input, #scorebord select {
+  font-family: 'Montserrat', sans-serif;
+  text-align-last: center;
+  width: 70%;
+  text-align: center;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #2b3558;
+  border: none;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 15px;
+  padding: 19px 0;
+  font-weight: 500;
+}
+
+/* line 140, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields input::placeholder, #inputfields select::placeholder, #scorebord input::placeholder, #scorebord select::placeholder {
+  color: #485170;
+}
+
+/* line 143, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields input:focus, #inputfields select:focus, #scorebord input:focus, #scorebord select:focus {
+  outline: none;
+}
+
+/* line 149, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #485170;
+  border: none;
+  width: 70%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 80px;
+}
+
+/* line 161, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields button:focus {
+  outline: none;
+}
+
+/* line 164, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields button:hover {
+  background-color: #2b3558;
+  color: #fff;
+}
+
+/* line 170, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#questionform img {
+  margin-right: 3%;
+  margin-bottom: 2%;
+  width: 7%;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+}
+
+/* line 178, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#questionform {
+  text-align: center;
+  width: 90%;
+}
+
+/* line 183, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#info-button, #nextquestion, #backtoQ, #worker, #addQ {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 50px !important;
+  font-weight: 500 !important;
+  width: 70%;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  display: block;
+  border-radius: 80px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  /* line 183, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+  #info-button, #nextquestion, #backtoQ, #worker, #addQ {
+    width: 600px;
+  }
+}
+
+/* line 199, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#info-button:focus, #nextquestion:focus, #backtoQ:focus, #worker:focus, #addQ:focus {
+  outline: none;
+}
+
+/* line 202, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#info-button:hover, #nextquestion:hover, #backtoQ:hover, #worker:hover, #addQ:hover {
+  background-color: #2b3558;
+  color: #fff;
+}
+
+/* line 208, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#result {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2%;
+  color: white;
+}
+
+/* line 217, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#infoblock {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* line 224, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.answerOption {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* line 229, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.final-announcement {
+  margin-top: 50px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* line 230, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.final-announcement a {
+  color: #fff;
+}
+
+/* line 236, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.final-announcement button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #485170;
+  border: none;
+  width: 70%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 80px;
+}
+
+/* line 248, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.final-announcement button:focus {
+  outline: none;
+}
+
+/* line 251, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.final-announcement button:hover {
+  background-color: #2b3558;
+  color: #fff;
+}
+
+/* line 257, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+button {
+  background-color: #fff;
+}
+
+/* line 260, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+* {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* line 266, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+.bottomStatusBar {
+  width: 100%;
+  height: 30px;
+  background-color: #2d375a;
+  padding: 1px 0 20px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 274, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#progress-bar {
+  font-family: 'Montserrat', sans-serif;
+  margin: auto;
+  background-color: #F6DFB7;
+  border-radius: 100px;
+  height: 20px;
+  width: 80%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* line 286, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#passed-questions {
+  background-color: #E7788B;
+  border-radius: 100px;
+  height: 20px;
+  width: 0%;
+}
+
+/* line 292, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#currentQuestion {
+  text-align: center;
+  color: #F6DFB7;
+}
+
+/* line 296, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#totalQuestions {
+  margin: auto;
+  padding-left: 40%;
+  width: 10%;
+  margin-top: -19px;
+  color: #E7788B;
+}
+
+/* line 303, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#routeWrapper {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: -18px;
+  background-color: #2b3558;
+}
+
+/* line 310, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#routebeschrijving {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* line 316, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#route {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  font-weight: 500 !important;
+  width: 70%;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  display: block;
+  border-radius: 80px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  /* line 316, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+  #route {
+    width: 600px;
+  }
+}
+
+/* line 331, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#route:focus {
+  outline: none;
+}
+
+/* line 334, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#route:hover {
+  background-color: #2b3558;
+  color: #fff;
+}
+
+/* line 339, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#close-route {
+  margin: auto;
+  background-color: #fff;
+  color: #485170;
+  border: 5px solid #3b4773;
+  width: 60%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 80px;
+}
+
+/* line 351, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#close-route:focus {
+  outline: none;
+}
+
+/* line 354, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#close-route:hover {
+  background-color: #2b3558;
+  color: #fff;
+}
+
+/* line 360, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  margin-top: 2%;
+}
+
+/* line 369, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#loopinstructies {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  position: center;
+}
+
+/* line 378, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields_workers {
+  text-align: center;
+}
+
+/* line 380, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields_workers input, #inputfields_workers select {
+  font-family: 'Montserrat', sans-serif;
+  text-align-last: center;
+  width: 70%;
+  text-align: center;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #2b3558;
+  border: none;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 15px;
+  padding: 19px 0;
+  font-weight: 500;
+}
+
+/* line 395, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields_workers input::placeholder, #inputfields_workers select::placeholder {
+  color: #485170;
+}
+
+/* line 398, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+#inputfields_workers input:focus, #inputfields_workers select:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=../css/style.map */
