@@ -28,8 +28,8 @@
 </head>
 
 <body>
-  <h1>Voeg hier vragen toe</h1>
-  <div id='inputfields_workers'>
+  <h1 class="animated fadeInDown">Voeg hier vragen toe</h1>
+  <div class="animated zoomIn" id='inputfields_workers'>
       <form>
                 <select id="difficulty" autofocus>
                     <option selected disabled hidden>Moeilijkheidsgraad</option>
@@ -46,7 +46,7 @@
           <input id="route" type="text" placeholder="Routebeschrijving"><br>
           <input id="info" type="tekst" placeholder="Extra info"><br>
       </form>
-      <button onclick="submitQuestion()">Voeg toe</button>
+      <button id="addQ" onclick="submitQuestion()">Voeg toe</button>
   </div>
 </body>
 </html>
