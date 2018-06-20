@@ -59,7 +59,7 @@ $light-blue: #485170;
 	#logo {
 		width: 70%;
 		@include bp(M768) {
-			width: 600px;
+			width: 450px;
 		}
 	}
 	#subtext {
@@ -94,6 +94,7 @@ h3 {
 }
 
 .answerWrapper {
+	padding: 15px;
 	box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -180,6 +181,10 @@ h3 {
 	width: 90%;
 }
 
+#question {
+	padding: 0 20px;
+}
+
 #info-button, #nextquestion, #backtoQ, #worker, #addQ {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 19px;
@@ -222,9 +227,10 @@ h3 {
 }
 
 .answerOption{
-	color: #fff;
-	margin-left: -70px;
-	font-weight: 500;
+	float: left;
+    color: #fff;
+    margin-left: 0px;
+    font-weight: 500;
 }
 
 .final-announcement {
