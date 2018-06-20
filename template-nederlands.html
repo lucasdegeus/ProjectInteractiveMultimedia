@@ -11,6 +11,8 @@
 
 
 	<!-- Web-applicatie meta-tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="HandheldFriendly" content="true">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +41,13 @@
 
 <div class="animated slideInRight">
 	<h3 id='container'></h3>
-	<button id='route' onclick="javascript:location.href='route.html'">Routebeschrijving</button>
+	<button id='route' onclick="showRoutebeschrijving()">Routebeschrijving</button>
+	<div id="routebeschrijving">
+	</div>
+	<script>
+		var x = document.getElementById("routebeschrijving");
+		x.style.display = "none";
+	</script>
 	<h3 id="question"></h3><br>
 	<table id="questionform" align="center">
 		<tr onclick="setAnswer('a')">
@@ -67,21 +75,15 @@
 			<td class="answerWrapper" id="answer-d"><span class="answerOption" id="answer4"></span><br></td>
 		</tr>
 	</table>
-	<div id="progress-bar"> 
-			<div id="passed-questions">
-				<p id="currentQuestion"></p>
-			</div>
-			<p id="totalQuestions"></p>
-		</div>
 	<button id="info" type="button" onclick="new_counter()">Bevestig antwoord</button>
 </div>
 <div class="bottomStatusBar">
-	<!-- <div id="progress-bar"> 
+	<div id="progress-bar"> 
 		<div id="passed-questions">
 			<p id="currentQuestion"></p>
 		</div>
 		<p id="totalQuestions"></p>
-	</div> -->
+	</div>
 </div>
 </body>
 </html>

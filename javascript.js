@@ -172,3 +172,41 @@ function new_counter() {
     localStorage.setItem("counter", newCounter);
     window.location.href  ="info.html"
 }
+
+function showRoutebeschrijving() {
+	var x = document.getElementById("routebeschrijving");
+	if (x.style.display ==="none") {
+		x.style.display = "block";
+	}
+		else {
+			x.style.display = "none";
+		}
+}
+
+function submitQuestion() {
+	//document.getElementById("vraag").value
+	var ydataObject = null
+	var submitDifficulty = document.getElementById("difficulty").value;
+	const newydataObject = firebase.database().ref().child(submitDifficulty);
+	newydataObject.on('value', snap => {
+		amountofquestions = snap.val();
+		countQuestion = 0
+		for (i in amountofquestions) {
+			countQuestion += 1;
+		}
+		localStorage.setItem('amountofquestions', countQuestion)
+	})
+
+
+
+  var xdataObject = firebase.database().ref().child(submitDifficulty);
+  var newChild = Number(Number(localStorage.amountofquestions) + 1)
+  xdataObject.child("Q" + newChild).child("Q").set(document.getElementById("vraag").value)
+  xdataObject.child("Q" + newChild).child("A1").set(document.getElementById("ans1").value)
+  xdataObject.child("Q" + newChild).child("A2").set(document.getElementById("ans2").value)
+  xdataObject.child("Q" + newChild).child("A3").set(document.getElementById("ans3").value)
+  xdataObject.child("Q" + newChild).child("A4").set(document.getElementById("ans4").value)
+  xdataObject.child("Q" + newChild).child("correct").set(document.getElementById("correct").value)
+  xdataObject.child("Q" + newChild).child("info").set(document.getElementById("info").value)
+  xdataObject.child("Q" + newChild).child("route").set(document.getElementById("route").value)
+}
