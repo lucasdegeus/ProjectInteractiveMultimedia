@@ -65,7 +65,7 @@ function setAnswer(answer) {
 
 function nextquestion() {
   	var data = null
-  	const dataObject = firebase.database().ref().child(localStorage.difficulty + '/0/Q' + localStorage.counter + '/0');
+  	const dataObject = firebase.database().ref().child(localStorage.difficulty + '/Q' + localStorage.counter);
   	dataObject.on('value', snap => {
     data= snap.val();
     if (data == null) {
@@ -79,9 +79,9 @@ function nextquestion() {
 
 function answerCheck() {
 	var data = null
-	const dataObject = firebase.database().ref().child(localStorage.difficulty + '/0/Q' + localStorage.counter + '/0');
+	const dataObject = firebase.database().ref().child(localStorage.difficulty + '/Q' + localStorage.counter);
 	dataObject.on('value', snap => {
-  	data= snap.val();
+	  data= snap.val();
   	if (data == null) {
 		document.getElementById("nextquestion").innerHTML = "Einde";
 	  }
@@ -170,7 +170,7 @@ function scorebord(data) {
 function new_counter() {
 	newCounter = Number(Number(localStorage.counter) + 1)
     localStorage.setItem("counter", newCounter);
-    window.location.href  ="info.html"
+	window.location.href  ="info.html"
 }
 
 function showRoutebeschrijving() {
