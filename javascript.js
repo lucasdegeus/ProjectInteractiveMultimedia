@@ -292,6 +292,4 @@ function setScorebord(time) {
 		show(monthlyplayers)
 	else
 		show(yearplayers)
-  	var xdataObject = firebase.database().ref().child(submitDifficulty);
-  	var newChild = Number(Number(localStorage.amountofquestions) + 1)
 }
