@@ -2,20 +2,27 @@ var name = ""
 var difficulty = ""
 
 function startGame() {
-	if (document.getElementById('difficulty').value != "Moeilijkheidsgraad") {
+	if (document.getElementById('difficulty').value != "Moeilijkheidsgraad" && document.getElementById('nameplayer').value != "") {
 		localStorage.setItem("difficulty", document.getElementById("difficulty").value)
 		localStorage.setItem("nameplayer", document.getElementById("nameplayer").value)
 		localStorage.setItem("firstLoad", "true");
 		window.location.href = 'template-nederlands.html'
 	}
 	else {
-		alert('Kies een Moeilijkheidsgraad')
+		if (document.getElementById('difficulty').value == "Moeilijkheidsgraad") {
+			alert('Kies een Moeilijkheidsgraad')
+		}
+		if (document.getElementById('nameplayer').value == "") {
+			alert("Voer een naam in")
+		}
 	}
 	localStorage.setItem("counter", Number(1))
 	localStorage.setItem("correctCounter", Number(0))
 } 
 
 function receiveData() {
+	//reset antwoord naar leeg, anders kunnen mensen geen antwoord invoeren en wordt het vorige antwoord gebruikt
+	localStorage.setItem("currentAnswer", "");
 	var languageDifficulty = ""
 	if (localStorage.difficulty == "EasyQ") {
 		languageDifficulty = "makkelijk"
@@ -184,41 +191,55 @@ function scorebord(data) {
 }		
 
 function new_counter() {
-	newCounter = Number(Number(localStorage.counter) + 1)
-    localStorage.setItem("counter", newCounter);
-	window.location.href  ="info.html"
-}
-
-function showRoutebeschrijving() {
-	var x = document.getElementById("routeWrapper");
-	if (x.style.display ==="none") {
-		x.style.display = "block";
+	if (localStorage.currentAnswer == "") {
+		alert("Kies een antwoord")
 	}
-		else {
-			x.style.display = "none";
-		}
-}
-
-function hideRoutebeschrijving() {
-	var closeRoute = document.getElementById("routeWrapper");
-	if (closeRoute.style.display ==="block") {
-		closeRoute.style.display = "none";
+	else {
+		newCounter = Number(Number(localStorage.counter) + 1)
+    	localStorage.setItem("counter", newCounter);
+		window.location.href  ="info.html"
 	}
 }
+
+// function showRoutebeschrijving() {
+// 	var x = document.getElementById("routeWrapper");
+// 	if (x.style.display ==="none") {
+// 		x.style.display = "block";
+// 	}
+// 		else {
+// 			x.style.display = "none";
+// 		}
+// }
+
+$(document).ready(function(){
+	$("#route").click(function(){
+		$("#routeWrapper").slideDown(400);
+	});
+	$("#close-route").click(function(){
+		$("#routeWrapper").slideUp(400);
+	});
+});
+
+// function hideRoutebeschrijving() {
+// 	var closeRoute = document.getElementById("routeWrapper");
+// 	if (closeRoute.style.display ==="block") {
+// 		closeRoute.style.display = "none";
+// 	}
+// }
 
 function submitQuestion() {
-	//document.getElementById("vraag").value
-	var ydataObject = null
-	var submitDifficulty = document.getElementById("difficulty").value;
-	const newydataObject = firebase.database().ref().child(submitDifficulty);
-	newydataObject.on('value', snap => {
-		amountofquestions = snap.val();
-		countQuestion = 0
-		for (i in amountofquestions) {
-			countQuestion += 1;
-		}
-		localStorage.setItem('amountofquestions', countQuestion)
-	})
+	if (document.getElementById("vraag").value != "" && document.getElementById("ans1").value != "" && document.getElementById("ans2").value != "" && document.getElementById("ans3").value != "" && document.getElementById("ans4").value != "" && document.getElementById("correct").value != "" && document.getElementById("info").value != "" && document.getElementById("route").value != "" && document.getElementById("difficulty").value != "Moeilijkheidsgraad") {
+		var ydataObject = null
+		var submitDifficulty = document.getElementById("difficulty").value;
+		const newydataObject = firebase.database().ref().child(submitDifficulty);
+		newydataObject.on('value', snap => {
+			amountofquestions = snap.val();
+			countQuestion = 0
+			for (i in amountofquestions) {
+				countQuestion += 1;
+			}
+			localStorage.setItem('amountofquestions', countQuestion)
+		})
 
 
 
@@ -232,6 +253,10 @@ function submitQuestion() {
   xdataObject.child("Q" + newChild).child("correct").set(document.getElementById("correct").value)
   xdataObject.child("Q" + newChild).child("info").set(document.getElementById("info").value)
   xdataObject.child("Q" + newChild).child("route").set(document.getElementById("route").value)
+	}
+  else {
+	alert("Voer alle velden in")
+	}
 }
 
 function setScorebord(time) {
@@ -255,4 +280,6 @@ function setScorebord(time) {
 		show(monthlyplayers)
 	else
 		show(yearplayers)
+  	var xdataObject = firebase.database().ref().child(submitDifficulty);
+  	var newChild = Number(Number(localStorage.amountofquestions) + 1)
 }

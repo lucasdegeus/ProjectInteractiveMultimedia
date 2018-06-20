@@ -254,22 +254,23 @@ h3 {
 /* line 224, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 .answerOption {
   color: #fff;
+  margin-left: -70px;
   font-weight: 500;
 }
 
-/* line 229, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 230, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 .final-announcement {
   margin-top: 50px;
   color: #fff;
   font-weight: 500;
 }
 
-/* line 230, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 231, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 .final-announcement a {
   color: #fff;
 }
 
-/* line 236, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 237, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 .final-announcement button {
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
@@ -284,23 +285,23 @@ h3 {
   border-radius: 80px;
 }
 
-/* line 248, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 249, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 .final-announcement button:focus {
   outline: none;
 }
 
-/* line 251, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 252, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 .final-announcement button:hover {
   background-color: #2b3558;
   color: #fff;
 }
 
-/* line 257, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 258, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 button {
   background-color: #fff;
 }
 
-/* line 260, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 261, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 * {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -308,7 +309,7 @@ button {
   transition: all 0.4s ease;
 }
 
-/* line 266, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 267, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 .bottomStatusBar {
   width: 100%;
   height: 30px;
@@ -318,7 +319,7 @@ button {
   bottom: 0;
 }
 
-/* line 274, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 275, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #progress-bar {
   font-family: 'Montserrat', sans-serif;
   margin: auto;
@@ -332,7 +333,7 @@ button {
   transition: all 0.4s ease;
 }
 
-/* line 286, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 287, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #passed-questions {
   background-color: #E7788B;
   border-radius: 100px;
@@ -340,13 +341,13 @@ button {
   width: 0%;
 }
 
-/* line 292, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 293, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #currentQuestion {
   text-align: center;
   color: #F6DFB7;
 }
 
-/* line 296, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 297, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #totalQuestions {
   margin: auto;
   padding-left: 40%;
@@ -355,8 +356,12 @@ button {
   color: #E7788B;
 }
 
-/* line 303, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 304, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #routeWrapper {
+  -webkit-transition: all 0s ease;
+  -moz-transition: all 0s ease;
+  -o-transition: all 0s ease;
+  transition: all 0s ease;
   position: absolute;
   height: 100vh;
   width: 100%;
@@ -364,7 +369,7 @@ button {
   background-color: #2b3558;
 }
 
-/* line 310, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 315, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #routebeschrijving {
   text-align: center;
   color: #fff;
@@ -372,7 +377,7 @@ button {
   margin-top: 20px;
 }
 
-/* line 316, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 321, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #route {
   font-family: 'Montserrat', sans-serif;
   font-size: 19px;
@@ -388,24 +393,24 @@ button {
 }
 
 @media (min-width: 768px) {
-  /* line 316, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+  /* line 321, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
   #route {
     width: 600px;
   }
 }
 
-/* line 331, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 336, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #route:focus {
   outline: none;
 }
 
-/* line 334, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 339, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #route:hover {
   background-color: #2b3558;
   color: #fff;
 }
 
-/* line 339, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 344, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #close-route {
   margin: auto;
   background-color: #fff;
@@ -420,18 +425,18 @@ button {
   border-radius: 80px;
 }
 
-/* line 351, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 356, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #close-route:focus {
   outline: none;
 }
 
-/* line 354, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 359, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #close-route:hover {
   background-color: #2b3558;
   color: #fff;
 }
 
-/* line 360, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 365, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
@@ -441,7 +446,7 @@ h1 {
   margin-top: 2%;
 }
 
-/* line 369, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 374, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #loopinstructies {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
@@ -451,12 +456,12 @@ h1 {
   position: center;
 }
 
-/* line 378, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 383, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #inputfields_workers {
   text-align: center;
 }
 
-/* line 380, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 385, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #inputfields_workers input, #inputfields_workers select {
   font-family: 'Montserrat', sans-serif;
   text-align-last: center;
@@ -474,12 +479,12 @@ h1 {
   font-weight: 500;
 }
 
-/* line 395, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 400, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #inputfields_workers input::placeholder, #inputfields_workers select::placeholder {
   color: #485170;
 }
 
-/* line 398, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
+/* line 403, C:/Users/ramon/Desktop/Project Interactive Multimedia/scss/style.scss */
 #inputfields_workers input:focus, #inputfields_workers select:focus {
   outline: none;
 }
