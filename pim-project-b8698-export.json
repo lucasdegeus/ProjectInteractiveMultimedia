@@ -1,0 +1,186 @@
+{
+  "EasyQ" : {
+    "Q1" : {
+      "A1" : "De burgermeester van Amsterdam en zijn werknemers",
+      "A2" : "De burgerwacht van Amsterdam",
+      "A3" : "De bewakers van de Koning",
+      "A4" : "Rijke handelaren",
+      "Q" : "Wie staan er afgebeeld op de nachtwacht?",
+      "correct" : "b",
+      "info" : "Wist je dat Rembrandt zichzelf in het schilderij heeft geschilderd?",
+      "object" : "De Nachtwacht",
+      "route" : "Vanaf de ingang rechtdoorBREAKGa naar linksBREAKGa de trap opBREAKU bent er"
+    },
+    "Q2" : {
+      "A1" : "Het nest verdedigen",
+      "A2" : "De zwaan vliegt",
+      "A3" : "De zwaan danst",
+      "A4" : "De zwaan zingt",
+      "Q" : "Wat doet de Zwaan",
+      "correct" : "a",
+      "info" : "De zwaan verdedigd zijn nest tegen een hond",
+      "route" : "Hier komt nog een route"
+    },
+    "Q3" : {
+      "A1" : "Elizabeth I",
+      "A2" : "De vrouw van Rembrandt",
+      "A3" : "Maria",
+      "A4" : "Marie Antoinette",
+      "Q" : "Van wie is dit beeld?",
+      "correct" : "c",
+      "info" : "Vanaf onder recht in de ogen van Maria kijken geeft een ander perspectief aan dit beeld",
+      "route" : "Vanaf de ingang rechtdoorBREAKGa naar linksBREAKGa de trap opBREAKU bent er"
+    },
+    "Q4" : {
+      "A1" : "De huishoudster",
+      "A2" : "De schoonmaakster",
+      "A3" : "De dienstmeid",
+      "A4" : "De arbeidster",
+      "Q" : "De benaming melkmeisje klopt niet helemaal, wat is de correcte benaming voor degene die hier wordt afgebeeld?",
+      "correct" : "c",
+      "info" : "De groep Nestlé gebruikt Het melkmeisje onder de Franse naam La Laitière als een commercieel merk",
+      "route" : "Hier komt een routebeschrijving"
+    },
+    "Q5" : {
+      "A1" : "Frederick Taylor",
+      "A2" : "Willem III",
+      "A3" : "Filips II",
+      "A4" : "Willem van Oranje",
+      "Q" : "Wie staat er op dit schilderij?",
+      "correct" : "d",
+      "info" : "De plek waar Willem van Oranje is vermoord is nog steeds te bezoeken!",
+      "route" : "route"
+    }
+  },
+  "HardQ" : {
+    "Q1" : {
+      "A1" : "Rembrandt's dochter",
+      "A2" : "De mascotte van de burgerwacht",
+      "A3" : "Rembrandt's zus",
+      "A4" : "De prinses van Holland",
+      "Q" : "Voor wie staat het belichte meisje symbool op De Nachtwacht?",
+      "correct" : "b",
+      "info" : "\"Wist je dat Rembrandt zichzelf in het schilderij heeft geschilderd?\"",
+      "object" : "De Nachtwacht",
+      "route" : "\"Vanaf de ingang rechtdoorBREAKGa naar linksBREAKGa de trap opBREAKU bent er\""
+    },
+    "Q2" : {
+      "A1" : "Cornelis de Witt",
+      "A2" : "Stadhouder Willem III",
+      "A3" : "Johan de Witt",
+      "A4" : "Cornelis de Graeff",
+      "Q" : "Wie symboliseert de zwaan?",
+      "correct" : "c",
+      "info" : "De zwaan verdedigd zijn nest tegen een hond",
+      "route" : "Hier komt een route"
+    },
+    "Q3" : {
+      "A1" : "1507-1510",
+      "A2" : "1550-1556",
+      "A3" : "1580-1584",
+      "A4" : "1600-1605",
+      "Q" : "Geef een schatting van wanneer dit beeld is gemaakt?",
+      "correct" : "a",
+      "info" : "Vanaf onder recht in de ogen van Maria kijken geeft een ander perspectief aan dit beeld",
+      "route" : "Hier komt een routebeschrijving"
+    },
+    "Q4" : {
+      "A1" : "Een schilderij",
+      "A2" : "Een raam",
+      "A3" : "Een kast",
+      "A4" : "Een mand",
+      "Q" : "Welk object was eerst achter het meisje geschilderd?",
+      "correct" : "a",
+      "info" : "De groep Nestlé gebruikt Het melkmeisje onder de Franse naam La Laitière als een commercieel merk",
+      "route" : "Hier komt een routebeschrijving"
+    },
+    "Q5" : {
+      "A1" : "Balthasar Gerards",
+      "A2" : "Filips II",
+      "A3" : "Fernando de Toledo",
+      "A4" : "Willem III",
+      "Q" : "Door wie werd Willem van Oranje vermoord?",
+      "correct" : "a",
+      "info" : "De plek waar Willem van Oranje is vermoord is nog steeds te bezoeken!",
+      "route" : "route"
+    }
+  },
+  "MediumQ" : {
+    "Q1" : {
+      "A1" : "Rembrandt had een te klein budget en heeft het daarom slordig geschilderd",
+      "A2" : "Rembrandt heeft dit schilderij niet alleen gemaakt",
+      "A3" : "Rembrandt heeft dit schilderij alleen s'nachts geschilderd",
+      "A4" : "Rembrandt heeft de mensen realistisch geschilderd",
+      "Q" : "Wat is een kenmerkend verschil tussen De Nachtwacht en andere schilderijen in deze ruimte?",
+      "correct" : "d",
+      "info" : "\"Wist je dat Rembrandt zichzelf in het schilderij heeft geschilderd?\"",
+      "object" : "De Nachtwacht",
+      "route" : "\"Vanaf de ingang rechtdoorBREAKGa naar linksBREAKGa de trap opBREAKU bent er\""
+    },
+    "Q2" : {
+      "A1" : "Geld",
+      "A2" : "Holland",
+      "A3" : "Spanje",
+      "A4" : "Natuur",
+      "Q" : "Wat symboliseert het nest dat de zwaan verdedigd?",
+      "correct" : "b",
+      "info" : "\"De zwaan verdedigd zijn nest tegen een hond\"",
+      "route" : "Hier komt een route"
+    },
+    "Q3" : {
+      "A1" : "De ezel is weggelopen",
+      "A2" : "Jezus is gestorven",
+      "A3" : "Het zijn tranen van geluk om de geboorte van Jezus",
+      "A4" : "Het volk komt in opstand",
+      "Q" : "Waarom is Maria zo bedroefd?",
+      "correct" : "b",
+      "info" : "Vanaf onder recht in de ogen van Maria kijken geeft een ander perspectief aan dit beeld",
+      "route" : "Hier komt route"
+    },
+    "Q4" : {
+      "A1" : "Toeval",
+      "A2" : "Zij stond symbool voor de middenklasse",
+      "A3" : "Lichtinval",
+      "A4" : "Geen van bovenstaande",
+      "Q" : "Waarom staat het meisje in het midden afgebeeld?",
+      "correct" : "c",
+      "info" : "De groep Nestlé gebruikt Het melkmeisje onder de Franse naam La Laitière als een commercieel merk",
+      "route" : "Hier komt een route beschrijving"
+    },
+    "Q5" : {
+      "A1" : "William the red guy",
+      "A2" : "Am Wille De Ranje",
+      "A3" : "William de Bard",
+      "A4" : "William Silent",
+      "Q" : "Op het schilderij zie je Willem van Oranje, wat was zijn bijnaam?",
+      "correct" : "d",
+      "info" : "De plek waar Willem van Oranje is vermoord is nog steeds te bezoeken!",
+      "route" : "route"
+    }
+  },
+  "Players" : [ null, {
+    "Day" : 16,
+    "Difficulty" : "MediumQ",
+    "Month" : 6,
+    "Name" : "Max",
+    "Score" : 1
+  }, {
+    "Day" : 16,
+    "Difficulty" : "MediumQ",
+    "Month" : 6,
+    "Name" : "Ramon",
+    "Score" : 1
+  }, {
+    "Day" : 16,
+    "Difficulty" : "EasyQ",
+    "Month" : 6,
+    "Name" : "Lucas",
+    "Score" : "2"
+  }, {
+    "Day" : 16,
+    "Difficulty" : "MediumQ",
+    "Month" : 5,
+    "Name" : "TestObject",
+    "Score" : 2
+  } ]
+}
