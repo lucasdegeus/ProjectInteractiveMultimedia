@@ -424,16 +424,35 @@ function setScorebord(time) {
 	console.log(selecteditem);
 	document.getElementById(selecteditem).style.border = "2px solid rgba(255, 255, 255, 0.2)";
 
-<<<<<<< HEAD
-	if (currentAnswer == 'day')
-		show(dailyplayers)
-	else if (currentAnswer == 'week')
-		show(weeklyplayers)
-	else if (currentAnwer == 'month')
-		show(monthlyplayers)
-	else
-		show(yearplayers)
+	if (selecteditem == 'day') {
+		document.getElementById('scorebord_day').style.display = 'table';
+		document.getElementById('scorebord_month').style.display = 'none';
+		document.getElementById('scorebord_year').style.display = 'none';
+		document.getElementById('scorebord_ever').style.display = 'none';
+	}
+
+	if (selecteditem == 'month') {
+		document.getElementById('scorebord_day').style.display = 'none';
+		document.getElementById('scorebord_month').style.display = 'table';
+		document.getElementById('scorebord_year').style.display = 'none';
+		document.getElementById('scorebord_ever').style.display = 'none';
+	}
+
+	if (selecteditem == 'year') {
+		document.getElementById('scorebord_day').style.display = 'none';
+		document.getElementById('scorebord_month').style.display = 'none';
+		document.getElementById('scorebord_year').style.display = 'table';
+		document.getElementById('scorebord_ever').style.display = 'none';
+	}
+
+	if (selecteditem == 'ever') {
+		document.getElementById('scorebord_day').style.display = 'none';
+		document.getElementById('scorebord_month').style.display = 'none';
+		document.getElementById('scorebord_year').style.display = 'none';
+		document.getElementById('scorebord_ever').style.display = 'table';
+	}
 }
+
 
 
 
@@ -460,7 +479,8 @@ function searchterm() {
         else {
         	alert("Geen gegevens gevonden")
         }
-        });
+		});
+		
    	var y = document.getElementById("objectnummer");
 	y.style.display = "block";
 	var z = document.getElementById("submitObject");
@@ -518,35 +538,6 @@ function manual() {
 	var y = document.getElementById("buttons");
 	y.style.display = "none";
 }
-=======
-	if (selecteditem == 'day') {
-		document.getElementById('scorebord_day').style.display = 'table';
-		document.getElementById('scorebord_month').style.display = 'none';
-		document.getElementById('scorebord_year').style.display = 'none';
-		document.getElementById('scorebord_ever').style.display = 'none';
-	}
-
-	if (selecteditem == 'month') {
-		document.getElementById('scorebord_day').style.display = 'none';
-		document.getElementById('scorebord_month').style.display = 'table';
-		document.getElementById('scorebord_year').style.display = 'none';
-		document.getElementById('scorebord_ever').style.display = 'none';
-	}
-
-	if (selecteditem == 'year') {
-		document.getElementById('scorebord_day').style.display = 'none';
-		document.getElementById('scorebord_month').style.display = 'none';
-		document.getElementById('scorebord_year').style.display = 'table';
-		document.getElementById('scorebord_ever').style.display = 'none';
-	}
-
-	if (selecteditem == 'ever') {
-		document.getElementById('scorebord_day').style.display = 'none';
-		document.getElementById('scorebord_month').style.display = 'none';
-		document.getElementById('scorebord_year').style.display = 'none';
-		document.getElementById('scorebord_ever').style.display = 'table';
-	}
-}
 
 function sortTable(table) {
 	var table, rows, switching, i, x, y, shouldSwitch;
@@ -582,4 +573,3 @@ function sortTable(table) {
 	  }
 	}
   }
->>>>>>> b13f3f17aaa7419d2085c24ea2382399ad28971b
