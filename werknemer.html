@@ -4,31 +4,52 @@
 	<title>Rijksmuseum: The Digital Experience</title>
     <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
 	<script>
-			const config = {
-    apiKey: "AIzaSyBSYQEzJnHMP4rexiPbMHVtRosqtEeHFL4",
-    authDomain: "pim-project-b8698.firebaseapp.com",
-    databaseURL: "https://pim-project-b8698.firebaseio.com",
-    storageBucket: "pim-project-b8698.appspot.com",
- 	 };
+			 const config = {
+        apiKey: "AIzaSyBSYQEzJnHMP4rexiPbMHVtRosqtEeHFL4",
+        authDomain: "pim-project-b8698.firebaseapp.com",
+        databaseURL: "https://pim-project-b8698.firebaseio.com",
+        storageBucket: "pim-project-b8698.appspot.com",
+ 	     };
   	firebase.initializeApp(config);
   </script>
 	<!-- Linked  -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="javascript.js"></script>
-	<link href="animate.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	   <script type="text/javascript" src="javascript.js"></script>
+	   <link href="animate.css" rel="stylesheet">
 
 	<!-- Web-applicatie meta-tags -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" href="IMG/rijkslogo.png">
+	   <meta name="apple-mobile-web-app-capable" content="yes">
+	   <meta name="mobile-web-app-capable" content="yes">
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   <link rel="apple-touch-icon" href="IMG/rijkslogo.png">
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 </head>
 
 <body>
+  <div id="inputfields">
+      <input type="text" id="objectnummer" value="objectnummer" style="display:none;"></input>
+      <input type="text" id="zoekterm" value="zoekterm" style="display:none;"></input>
+  </div>
+  <div id="template-painting"></div>
+  <div id="buttons">
+    <button onclick="showObjectfinder()" id="info-button">Voer objectnummer in</button>
+
+    <button onclick="showSearchterm()" id="info-button">Zoek een objectnummer op</button>
+    <button onclick="manual()" id="info-button">Voer gegevens handmatig in</button>
+</div>
+<div id="submit">
+    <button onclick="objectfinder()" id="submitObject" style="display:none;">Voer objectnummer in</button>
+    <button onclick="searchterm()" id="submitSearch" style="display:none;">Voer een zoekterm in</button>
+  </div>
+<div id="possibleObjects"></div>
+
+
+
+
+<div id="addQuestion" style="display: none;">  
   <h1 class="animated fadeInDown">Voeg hier vragen toe</h1>
   <div class="animated zoomIn" id='inputfields_workers'>
       <form>
@@ -44,10 +65,14 @@
           <input id="ans3" type="text" placeholder="Antwoordmogelijkheid 3"><br>
           <input id="ans4" type="text" placeholder="Antwoordmogelijkheid 4"><br>
           <input id="correct" type="text" placeholder="Correcte antwoord"><br>
-          <input id="route" type="text" placeholder="Routebeschrijving"><br>
+          <input id="routeb" type="text" placeholder="Routebeschrijving"><br>
+          <input id="painter" type="text" placeholder="Schilder"><br>
+          <input id="painting" type="text" placeholder="Schilderij"><br>
+          <input id="fact" type="text" placeholder="Weetje"><br>
           <input id="info" type="tekst" placeholder="Extra info"><br>
       </form>
       <button id="addQ" onclick="submitQuestion()">Voeg toe</button>
   </div>
+</div>
 </body>
 </html>

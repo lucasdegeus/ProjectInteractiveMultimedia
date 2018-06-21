@@ -263,8 +263,11 @@ function submitQuestion() {
   xdataObject.child("Q" + newChild).child("A3").set(document.getElementById("ans3").value)
   xdataObject.child("Q" + newChild).child("A4").set(document.getElementById("ans4").value)
   xdataObject.child("Q" + newChild).child("correct").set(document.getElementById("correct").value)
+  xdataObject.child("Q" + newChild).child("route").set(document.getElementById("routeb").value)
   xdataObject.child("Q" + newChild).child("info").set(document.getElementById("info").value)
-  xdataObject.child("Q" + newChild).child("route").set(document.getElementById("route").value)
+  xdataObject.child("Q" + newChild).child("fact").set(document.getElementById("fact").value)
+  xdataObject.child("Q" + newChild).child("painter").set(document.getElementById("painter").value)
+  xdataObject.child("Q" + newChild).child("painting").set(document.getElementById("painting").value)
 	}
   else {
 	alert("Voer alle velden in")
@@ -292,4 +295,88 @@ function setScorebord(time) {
 		show(monthlyplayers)
 	else
 		show(yearplayers)
+}
+
+
+
+
+function searchterm() {
+	document.getElementById("possibleObjects").innerHTML = ""
+        $.get("https://www.rijksmuseum.nl/api/nl/collection?key=W83gXGlp&format=json&q=" + document.getElementById("zoekterm").value + "&s=relevance" ,function(data,status) {
+        	console.log(data);	
+        	if (data.artObjects.length != null) {
+        	for (i = 0; i < 7; i++) {
+        		document.getElementById("possibleObjects").innerHTML += data.artObjects[i].principalOrFirstMaker + data.artObjects[i].title + data.artObjects[i].objectNumber;
+        		if (data.artObjects[i].webImage != null) {
+        		var elem = document.createElement("img");
+				elem.src = data.artObjects[i].webImage.url;
+				elem.width = 50;
+				document.getElementById("possibleObjects").appendChild(elem);
+				document.getElementById("possibleObjects").innerHTML += "<br>"
+			}
+				else {
+				document.getElementById("possibleObjects").innerHTML += "Geen foto beschikbaar &emsp;"
+				}
+        	}
+        }
+        else {
+        	alert("Geen gegevens gevonden")
+        }
+        });
+   	var y = document.getElementById("objectnummer");
+	y.style.display = "block";
+	var z = document.getElementById("submitObject");
+	z.style.display = "block";
+    };
+
+function showSearchterm() {
+	var x = document.getElementById("buttons");
+	x.style.display = "none";
+	var y = document.getElementById("zoekterm");
+	y.style.display = "block";
+	var z = document.getElementById("submitSearch");
+	z.style.display = "block";
+}
+
+
+function showObjectfinder() {
+	var x = document.getElementById("buttons");
+	x.style.display = "none";
+	var y = document.getElementById("objectnummer");
+	y.style.display = "block";
+	var z = document.getElementById("submitObject");
+	z.style.display = "block";
+}
+
+
+function objectfinder() {
+    $.get("https://www.rijksmuseum.nl/api/nl/collection/" + document.getElementById("objectnummer").value + "?key=W83gXGlp&format=json", function(data, status){
+        console.log(data)
+		document.getElementById("painter").value = data.artObject.principalMakers[0].name;
+		document.getElementById("painting").value = data.artObject.title;
+		document.getElementById("info").value = data.artObject.description;
+		localStorage.setItem("currentPainting", data);
+
+        });
+    var x = document.getElementById("addQuestion");
+	x.style.display = "block";
+	var y = document.getElementById("objectnummer");
+	y.style.display = "none";
+	var z = document.getElementById("submitObject");
+	z.style.display = "none";
+	var a = document.getElementById("inputfields");
+	a.style.display = "none";
+	var b = document.getElementById("buttons");
+	b.style.display = "none";
+	var c = document.getElementById("submit");
+	c.style.display = "none";
+	var d = document.getElementById("possibleObjects");
+	d.style.display = "none";
+    };
+
+function manual() {
+	var x = document.getElementById("addQuestion");
+	x.style.display = "block";
+	var y = document.getElementById("buttons");
+	y.style.display = "none";
 }
