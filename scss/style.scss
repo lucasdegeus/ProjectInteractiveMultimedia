@@ -14,7 +14,7 @@ body {
     background-attachment: fixed;
 	background-color: #35416B;
 	overflow-x: hidden;
-    max-width: 100%;
+	max-width: 100%;
 }
 
 //Vaak gebruikte kleuren
@@ -38,6 +38,32 @@ $light-blue: #485170;
 	@else if $point == M768 {
 		@media (min-width: 768px) { @content; }
 	}
+
+	// Vertical BreakPoints
+	@else if $point == H1300 {
+		@media (min-height: 1300px) { @content; }
+	}
+	@else if $point == H1024 {
+		@media (min-height: 1024px) { @content; }
+	}
+	@else if $point == H900 {
+		@media (min-height: 900px) { @content; }
+	}
+	@else if $point == H800 {
+		@media (min-height: 800px) { @content; }
+	}
+	@else if $point == H700 {
+		@media (min-height: 700px) { @content; }
+	}
+	@else if $point == H600 {
+		@media (min-height: 600px) { @content; }
+	}
+}
+* {
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }
 
 #mt-big {
@@ -263,19 +289,33 @@ h3 {
  button {
 	background-color: #fff;
  }
-* {
-	-webkit-transition: all 0.4s ease;
-	-moz-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-}
 .bottomStatusBar {
+	position: sticky;
+	position: -webkit-sticky;
 	width: 100%;
 	height: 30px;
 	background-color: #2d375a;
     padding: 1px 0 20px 0;
 	margin-top: 20px;
-    bottom: 0;
+	bottom: 0;
+	@include bp(H600) {
+		margin-top: 90px;
+	}
+	@include bp(H700) {
+		margin-top: 160px;
+	}
+	@include bp(H800) {
+		margin-top: 250px;
+	}
+	@include bp(H900) {
+		margin-top: 350px;
+	}
+	@include bp(H1024) {
+		margin-top: 440px;
+	}
+	@include bp(H1300) {
+		margin-top: 790px;
+	}
 }
 #progress-bar {
 	font-family: 'Montserrat', sans-serif;
