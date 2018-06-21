@@ -29,13 +29,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 </head>
 
-<body onload="scorebord()" onload= "saveScore()" class="animated slideInRight" id="main">
+<body onload = "scorebord()" class="animated slideInRight" id="main">
   <h1>Dit is het einde van The Digital Experience, check je score:</h1>
   <div id="scorebord">
-	  <button onclick="setScorebord('day')" class="mc-circle" id='day'>Dag</button>
-	  <button onclick="setScorebord('week')" class="mc-circle" id='week'>Week</button>
-	  <button onclick="setScorebord('month')" class="mc-circle" id='month'>Maand</button>
-	  <button onclick="setScorebord('year')" class="mc-circle" id='year'>Jaar</button>
+	  <button onclick= "setScorebord('day')" class="mc-circle" id='day'>Dag</button>
+	  <button onclick= "setScorebord('month')" class="mc-circle" id='month'>Maand</button>
+	  <button onclick= "setScorebord('year')" class="mc-circle" id='year'>Jaar</button>
+	  <button onclick= "setScorebord('ever')" class="mc-circle" id='ever'>Altijd</button>
   </div>
 <center><div class="final-announcement">
 		<!--<a href="index.html">Dit waren alle vragen, linkje om terug te gaan naar index.</a>
@@ -47,7 +47,13 @@
 		<button type="button" onclick="saveScore()">Sla mijn score op</button>
 		<button type="button" onclick="scorebord()">Toon scorebord</button>
 		<div id="scorebord"></div>-->
-		<table id="myTable">
+		<table id="scorebord_day">
+		</table>
+		<table id="scorebord_month">
+		</table>
+		<table id="scorebord_year">
+		</table>
+		<table id="scorebord_ever">
 		</table>
 </div>
 </center>
