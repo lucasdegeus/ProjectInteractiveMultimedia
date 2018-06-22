@@ -87,7 +87,6 @@ function setAnswer(answer) {
 	localStorage.setItem("currentAnswer", answer);
 	
 	var selecteditem = 'answer-'+answer;
-	console.log(selecteditem);
 	document.getElementById(selecteditem).style.border = "2px solid rgba(255, 255, 255, 0.2)";
 }
 
@@ -170,9 +169,9 @@ function scorebord() {
 	head_day.setAttribute("id", "TableHead_day");
 	document.getElementById("scorebord_day").appendChild(head_day);
 	
-    var y_day = document.createElement("TR");
-    y_day.setAttribute("id", "myTr_day");
-    document.getElementById("scorebord_day").appendChild(y_day);
+    // var y_day = document.createElement("TR");
+    // y_day.setAttribute("id", "myTr_day");
+    // document.getElementById("scorebord_day").appendChild(y_day);
 	
 	var body_day = document.createElement("TBODY");
 	body_day.setAttribute("id", "TableBody_day");
@@ -213,9 +212,9 @@ function scorebord() {
 	head_month.setAttribute("id", "TableHead_month");
 	document.getElementById("scorebord_month").appendChild(head_month);
 	
-    var y_month = document.createElement("TR");
-    y_month.setAttribute("id", "myTr_month");
-    document.getElementById("scorebord_month").appendChild(y_month);
+    // var y_month = document.createElement("TR");
+    // y_month.setAttribute("id", "myTr_month");
+    // document.getElementById("scorebord_month").appendChild(y_month);
 	
 	var body_month = document.createElement("TBODY");
 	body_month.setAttribute("id", "TableBody_month");
@@ -256,9 +255,9 @@ function scorebord() {
 	head_year.setAttribute("id", "TableHead_year");
 	document.getElementById("scorebord_year").appendChild(head_year);
 	
-    var y_year = document.createElement("TR");
-    y_year.setAttribute("id", "myTr_year");
-    document.getElementById("scorebord_year").appendChild(y_year);
+    // var y_year = document.createElement("TR");
+    // y_year.setAttribute("id", "myTr_year");
+    // document.getElementById("scorebord_year").appendChild(y_year);
 	
 	var body_year = document.createElement("TBODY");
 	body_year.setAttribute("id", "TableBody_year");
@@ -299,9 +298,9 @@ function scorebord() {
 	head.setAttribute("id", "TableHead");
 	document.getElementById("scorebord_ever").appendChild(head);
 	
-    var y = document.createElement("TR");
-    y.setAttribute("id", "myTr");
-    document.getElementById("scorebord_ever").appendChild(y);
+    // var y = document.createElement("TR");
+    // y.setAttribute("id", "myTr");
+    // document.getElementById("scorebord_ever").appendChild(y);
 	
 	var body = document.createElement("TBODY");
 	body.setAttribute("id", "TableBody");
@@ -421,7 +420,6 @@ function setScorebord(time) {
 	localStorage.setItem("currentAnswer", time);
 	
 	var selecteditem = time;
-	console.log(selecteditem);
 	document.getElementById(selecteditem).style.border = "2px solid rgba(255, 255, 255, 0.2)";
 
 	if (selecteditem == 'day') {
@@ -429,6 +427,7 @@ function setScorebord(time) {
 		document.getElementById('scorebord_month').style.display = 'none';
 		document.getElementById('scorebord_year').style.display = 'none';
 		document.getElementById('scorebord_ever').style.display = 'none';
+		sortTable('scorebord_day')
 	}
 
 	if (selecteditem == 'month') {
@@ -436,6 +435,7 @@ function setScorebord(time) {
 		document.getElementById('scorebord_month').style.display = 'table';
 		document.getElementById('scorebord_year').style.display = 'none';
 		document.getElementById('scorebord_ever').style.display = 'none';
+		sortTable('scorebord_month')
 	}
 
 	if (selecteditem == 'year') {
@@ -443,6 +443,7 @@ function setScorebord(time) {
 		document.getElementById('scorebord_month').style.display = 'none';
 		document.getElementById('scorebord_year').style.display = 'table';
 		document.getElementById('scorebord_ever').style.display = 'none';
+		sortTable('scorebord_year')
 	}
 
 	if (selecteditem == 'ever') {
@@ -450,6 +451,7 @@ function setScorebord(time) {
 		document.getElementById('scorebord_month').style.display = 'none';
 		document.getElementById('scorebord_year').style.display = 'none';
 		document.getElementById('scorebord_ever').style.display = 'table';
+		sortTable('scorebord_ever')
 	}
 }
 
@@ -539,16 +541,16 @@ function manual() {
 	y.style.display = "none";
 }
 
-function sortTable(table) {
+function sortTable(time) {
 	var table, rows, switching, i, x, y, shouldSwitch;
-	table = document.getElementById("myTable");
+	table = document.getElementById(time);
 	switching = true;
 	/*Make a loop that will continue until
 	no switching has been done:*/
 	while (switching) {
 	  //start by saying: no switching is done:
 	  switching = false;
-	  rows = table.getElementsByTagName("TR");
+	  rows = table.getElementsByTagName("TR");	  
 	  /*Loop through all table rows (except the
 	  first, which contains table headers):*/
 	  for (i = 1; i < (rows.length - 1); i++) {
@@ -556,8 +558,8 @@ function sortTable(table) {
 		shouldSwitch = false;
 		/*Get the two elements you want to compare,
 		one from current row and one from the next:*/
-		x = rows[i].getElementsByTagName("TD")[0];
-		y = rows[i + 1].getElementsByTagName("TD")[0];
+		x = rows[i].getElementsByTagName("TD")[1];
+		y = rows[i + 1].getElementsByTagName("TD")[1];
 		//check if the two rows should switch place:
 		if (Number(x.innerHTML) < Number(y.innerHTML)) {
 		  //if so, mark as a switch and break the loop:
