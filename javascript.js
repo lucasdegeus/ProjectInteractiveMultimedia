@@ -462,16 +462,65 @@ function setScorebord(time) {
 function searchterm() {
 	document.getElementById("possibleObjects").innerHTML = ""
         $.get("https://www.rijksmuseum.nl/api/nl/collection?key=W83gXGlp&format=json&q=" + document.getElementById("zoekterm").value + "&s=relevance" ,function(data,status) {
-        	console.log(data);	
+        	// console.log(data);	
         	if (data.artObjects.length != null) {
         	for (i = 0; i < 7; i++) {
-        		document.getElementById("possibleObjects").innerHTML += data.artObjects[i].principalOrFirstMaker + data.artObjects[i].title + data.artObjects[i].objectNumber;
+				var objectRow = document.createElement('div');
+				objectRow.className = 'objectRow';
+
+					//kunstenaar naam
+					var artistRow = document.createElement('div');
+					artistRow.className = 'artistRow';
+						var artistDesc = document.createElement('div');
+						artistDesc.className = 'artistDesc';
+						artistDesc.innerHTML = 'First Maker: '
+						artistRow.appendChild(artistDesc);
+
+						var artistName = document.createElement('div');
+						artistName.className = 'artistName';
+						artistName.innerHTML = data.artObjects[i].principalOrFirstMaker
+						artistRow.appendChild(artistName);
+
+					objectRow.appendChild(artistRow);
+
+					//titel kunstwerk
+					var artistRow = document.createElement('div');
+					artistRow.className = 'artistRow';
+						var artistDesc = document.createElement('div');
+						artistDesc.className = 'artistDesc';
+						artistDesc.innerHTML = 'Title:  '
+						artistRow.appendChild(artistDesc);
+
+						var artistName = document.createElement('div');
+						artistName.className = 'artistName';
+						artistName.innerHTML = data.artObjects[i].title;
+						artistRow.appendChild(artistName);
+						
+					objectRow.appendChild(artistRow);
+
+					//objectnummer
+					var artistRow = document.createElement('div');
+					artistRow.className = 'artistRow';
+						var artistDesc = document.createElement('div');
+						artistDesc.className = 'artistDesc';
+						artistDesc.innerHTML = 'Object Number:  '
+						artistRow.appendChild(artistDesc);
+
+						var artistName = document.createElement('div');
+						artistName.className = 'artistName';
+						artistName.innerHTML = data.artObjects[i].objectNumber;
+						artistRow.appendChild(artistName);
+						
+					objectRow.appendChild(artistRow);
+				
         		if (data.artObjects[i].webImage != null) {
         		var elem = document.createElement("img");
 				elem.src = data.artObjects[i].webImage.url;
 				elem.width = 50;
-				document.getElementById("possibleObjects").appendChild(elem);
-				document.getElementById("possibleObjects").innerHTML += "<br>"
+				objectRow.appendChild(elem);
+				objectRow.innerHTML += "<br>"
+				document.getElementById("possibleObjects").appendChild(objectRow);   
+				// document.getElementById("possibleObjects").innerHTML += "</div>"
 			}
 				else {
 				document.getElementById("possibleObjects").innerHTML += "Geen foto beschikbaar &emsp;"
@@ -511,7 +560,7 @@ function showObjectfinder() {
 
 function objectfinder() {
     $.get("https://www.rijksmuseum.nl/api/nl/collection/" + document.getElementById("objectnummer").value + "?key=W83gXGlp&format=json", function(data, status){
-        console.log(data)
+        // console.log(data)
 		document.getElementById("painter").value = data.artObject.principalMakers[0].name;
 		document.getElementById("painting").value = data.artObject.title;
 		document.getElementById("info").value = data.artObject.description;

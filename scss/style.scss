@@ -79,6 +79,26 @@ $light-blue: #485170;
 	margin-top: 10px;
 }
 
+#generalbuttonstyle {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #fff;
+	color: $light-blue;
+	border: none;
+	text-align:center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 19px;
+    font-weight: 500;
+	border-radius: 80px;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background-color: $dark-blue;
+		color: #fff;
+	}
+}
+
 #header {
 	margin-top: 40px;
 	text-align: center;
@@ -172,8 +192,63 @@ h3 {
 		}
 	}
 }
-
-#inputfields button{
+#inputfields {
+	margin-top: 40px !important;
+	width: 90%;
+	margin: auto;
+	input, select {
+		width: 100% !important;
+	}
+	@include bp(M768) {
+		width: 700px;
+	}
+}
+#submit {
+	button {
+		@extend #generalbuttonstyle;
+		width: 90%;
+		margin: auto;
+		@include bp(M768) {
+			width: 700px;
+		}
+	}
+	button#submitObject {
+		margin-bottom: 20px;
+	}
+}
+#possibleObjects {
+	margin-top: 50px !important;
+    width: 70%;
+    margin: auto;
+	color: #fff;
+	img {
+		vertical-align: middle;
+		height: 130px;
+		width: auto;
+		margin-left: 30px;
+		margin-bottom: 0px;
+		border-radius: 5px;
+		margin-top: 10px;
+		float: right;
+		margin-top: -60px;
+	}
+	.objectRow {
+		background-color: $dark-blue;
+		margin-bottom: 20px;
+		border-radius: 10px;
+		padding: 20px;
+		min-height: 130px;
+	}
+	.artistDesc {
+		width: 150px;
+		float: left;
+		margin-right: 5px;
+	}
+	@include bp(W768) {
+		width: 90%;
+	}
+}
+#inputfields button {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #fff;
 	color: $light-blue;
