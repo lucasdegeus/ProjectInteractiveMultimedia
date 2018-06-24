@@ -457,8 +457,30 @@ function setScorebord(time) {
 
 
 
+function objectfinderWithInput(objectCode) {
+	console.log('this is my input: ' + objectCode);
+    $.get("https://www.rijksmuseum.nl/api/nl/collection/" + objectCode + "?key=W83gXGlp&format=json", function(data, status){
+		document.getElementById("painter").value = data.artObject.principalMakers[0].name;
+		document.getElementById("painting").value = data.artObject.title;
+		document.getElementById("info").value = data.artObject.description;
+		localStorage.setItem("currentPainting", data);
 
-
+        });
+    var x = document.getElementById("addQuestion");
+	x.style.display = "block";
+	var y = document.getElementById("objectnummer");
+	y.style.display = "none";
+	var z = document.getElementById("submitObject");
+	z.style.display = "none";
+	var a = document.getElementById("inputfields");
+	a.style.display = "none";
+	var b = document.getElementById("buttons");
+	b.style.display = "none";
+	var c = document.getElementById("submit");
+	c.style.display = "none";
+	var d = document.getElementById("possibleObjects");
+	d.style.display = "none";
+    };
 function searchterm() {
 	document.getElementById("possibleObjects").innerHTML = ""
         $.get("https://www.rijksmuseum.nl/api/nl/collection?key=W83gXGlp&format=json&q=" + document.getElementById("zoekterm").value + "&s=relevance" ,function(data,status) {
@@ -478,7 +500,7 @@ function searchterm() {
 
 						var artistName = document.createElement('div');
 						artistName.className = 'artistName';
-						artistName.innerHTML = data.artObjects[i].principalOrFirstMaker
+						artistName.innerHTML = data.artObjects[i].principalOrFirstMaker;
 						artistRow.appendChild(artistName);
 
 					objectRow.appendChild(artistRow);
@@ -507,17 +529,32 @@ function searchterm() {
 						artistRow.appendChild(artistDesc);
 
 						var artistName = document.createElement('div');
-						artistName.className = 'artistName';
+						artistName.id = 'objectNumber';
 						artistName.innerHTML = data.artObjects[i].objectNumber;
 						artistRow.appendChild(artistName);
 						
 					objectRow.appendChild(artistRow);
 				
+
+					//Choose button
+					var selectButton = document.createElement('button');
+					selectButton.className = 'selectButton';
+						selectButton.innerHTML = "Kies";
+						$(function() {
+							$('.selectButton').click(function() {
+								objectfinderWithInput(data.artObjects[i].objectNumber);
+							});
+						});
+					objectRow.appendChild(selectButton);
+
         		if (data.artObjects[i].webImage != null) {
-        		var elem = document.createElement("img");
-				elem.src = data.artObjects[i].webImage.url;
-				elem.width = 50;
-				objectRow.appendChild(elem);
+				var imageWrapper = document.createElement('div');
+				imageWrapper.className = 'imageWrapper';
+        			var elem = document.createElement("img");
+					elem.src = data.artObjects[i].webImage.url;
+					elem.width = 50;
+				imageWrapper.appendChild(elem);	
+				objectRow.appendChild(imageWrapper);
 				objectRow.innerHTML += "<br>"
 				document.getElementById("possibleObjects").appendChild(objectRow);   
 				// document.getElementById("possibleObjects").innerHTML += "</div>"
@@ -537,7 +574,7 @@ function searchterm() {
 	var z = document.getElementById("submitObject");
 	z.style.display = "block";
     };
-
+	
 function showSearchterm() {
 	var x = document.getElementById("buttons");
 	x.style.display = "none";
@@ -566,7 +603,7 @@ function objectfinder() {
 		document.getElementById("info").value = data.artObject.description;
 		localStorage.setItem("currentPainting", data);
 
-        });
+        });7
     var x = document.getElementById("addQuestion");
 	x.style.display = "block";
 	var y = document.getElementById("objectnummer");

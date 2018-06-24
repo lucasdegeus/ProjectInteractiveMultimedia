@@ -32,6 +32,9 @@ $light-blue: #485170;
 	@else if $point == W1100 {
 		@media (max-width: 1100px) { @content; }
 	}
+	@else if $point == W900 {
+		@media (max-width: 900px) { @content; }
+	}
 	@else if $point == W768 {
 		@media (min-width: 768px) { @content; }
 	}
@@ -230,7 +233,14 @@ h3 {
 		border-radius: 5px;
 		margin-top: 10px;
 		float: right;
-		margin-top: -60px;
+		margin-top: -75px;
+		@include bp(W900) {
+			margin-left: 0px;
+			float: unset !important;
+			margin-top: 10px;
+			width: 240px;
+			height: auto;
+		}
 	}
 	.objectRow {
 		background-color: $dark-blue;
@@ -239,13 +249,28 @@ h3 {
 		padding: 20px;
 		min-height: 130px;
 	}
+	.imageWrapper {
+		@include bp(W900) {
+			text-align: center;
+		}
+	}
+	.artistName {
+		max-width: 60%;
+		margin-left: 155px;
+		@include bp(W900) {	
+			margin-left: 135px;
+		}
+	}
 	.artistDesc {
 		width: 150px;
 		float: left;
 		margin-right: 5px;
+		@include bp(W900) {	
+			width: 130px;
+		}
 	}
-	@include bp(W768) {
-		width: 90%;
+	@include bp(W900) {
+		width: 90% !important;
 	}
 }
 #inputfields button {
