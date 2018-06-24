@@ -487,6 +487,7 @@ function searchterm() {
         	// console.log(data);	
         	if (data.artObjects.length != null) {
         	for (i = 0; i < 7; i++) {
+				var TestFf = i
 				var objectRow = document.createElement('div');
 				objectRow.className = 'objectRow';
 
@@ -534,17 +535,10 @@ function searchterm() {
 						artistRow.appendChild(artistName);
 						
 					objectRow.appendChild(artistRow);
-				
 
-					//Choose button
 					var selectButton = document.createElement('button');
-					selectButton.className = 'selectButton';
-						selectButton.innerHTML = "Kies";
-						$(function() {
-							$('.selectButton').click(function() {
-								objectfinderWithInput(data.artObjects[i].objectNumber);
-							});
-						});
+					selectButton.id = 'selectButton'+i;
+					selectButton.innerHTML = "Kies";
 					objectRow.appendChild(selectButton);
 
         		if (data.artObjects[i].webImage != null) {
@@ -562,7 +556,44 @@ function searchterm() {
 				else {
 				document.getElementById("possibleObjects").innerHTML += "Geen foto beschikbaar &emsp;"
 				}
-        	}
+
+				//Functie is veel te lang maar leek de enige oplossing te zijn.
+				$(function() {
+					$("#selectButton0").click(function() {
+						objectfinderWithInput(data.artObjects[0].objectNumber);
+					});
+				});
+				$(function() {
+					$("#selectButton1").click(function() {
+						objectfinderWithInput(data.artObjects[1].objectNumber);
+					});
+				});
+				$(function() {
+					$("#selectButton2").click(function() {
+						objectfinderWithInput(data.artObjects[2].objectNumber);
+					});
+				});
+				$(function() {
+					$("#selectButton3").click(function() {
+						objectfinderWithInput(data.artObjects[3].objectNumber);
+					});
+				});
+				$(function() {
+					$("#selectButton4").click(function() {
+						objectfinderWithInput(data.artObjects[4].objectNumber);
+					});
+				});
+				$(function() {
+					$("#selectButton5").click(function() {
+						objectfinderWithInput(data.artObjects[5].objectNumber);
+					});
+				});
+				$(function() {
+					$("#selectButton6").click(function() {
+						objectfinderWithInput(data.artObjects[6].objectNumber);
+					});
+				});
+			}
         }
         else {
         	alert("Geen gegevens gevonden")
@@ -573,7 +604,10 @@ function searchterm() {
 	y.style.display = "block";
 	var z = document.getElementById("submitObject");
 	z.style.display = "block";
-    };
+		
+
+
+};
 	
 function showSearchterm() {
 	var x = document.getElementById("buttons");
