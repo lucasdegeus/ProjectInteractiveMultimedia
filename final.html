@@ -25,6 +25,7 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="apple-touch-icon" href="IMG/app-icon.png">
+	<link rel="icon" href="IMG/app-icon.png">
 
 	<!-- Lettertypes -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
@@ -34,13 +35,22 @@
   	<meta property="og:type"          content="website" />
   	<meta property="og:title"         content="Het Nieuwe Rijksmuseum: The Digital Experience" />
   	<meta property="og:description"   content="Beleef het Rijksmuseum op een nieuwe manier, ervaar het zelf in het Rijks!" />
-  	<meta property="og:image"         content="IMG/banner.jpg" />
+	<meta property="og:image"         content="IMG/banner.jpg" />
+
+  	<!-- Twitter share data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Het Nieuwe Rijksmuseum: The Digital Experience">
+	<meta name="twitter:description" content="Beleef het Rijksmuseum op een nieuwe manier, ervaar het zelf in het Rijks!">
+	<meta name="twitter:image" content="IMG/banner.jpg">
+	<meta name="twitter:domain" content="https://pim-project-b8698.firebaseapp.com">
+
 </head>
 
 <body onload = "scorebord()" class="animated slideInRight" id="main">
   <h1 id="final-header">Dit is het einde van The Digital Experience, check je score:</h1>
 <center>
 		<br>
+		<img class="smiley" src="IMG/smile.svg"/>
 		<div id="amountCorrect"></div>
 		<script>
 			document.getElementById("amountCorrect").innerHTML = "Goed gedaan " + localStorage.nameplayer +  "! &#127881; <br />" + "Zoveel vragen had je goed: "+localStorage.correctCounter;
@@ -60,21 +70,19 @@
 			<table id="scorebord_ever">
 			</table>
 		</div>
-		
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-	  
-		<div class="fb-share-button" 
-		  data-href="https://pim-project-b8698.firebaseapp.com/" 
-		  data-layout="button_count">
+
+		<div class="shareMe">
+			<p>Deel je ervaring van het Rijksmuseum met je vrienden!</p>
+			<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fpim-project-b8698.firebaseapp.com%2F&layout=button&size=large&mobile_iframe=true&width=73&height=28&appId" width="73" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 		</div>
-</div>
+		<div class="shareMe">
+			<p>Tweet over je bezoek aan het Rijksmuseum!</p>
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Ik heb net met de nieuwe Rijksmuseum app een digital experience gedaan, ervaar het ook bij het rijks!" data-url="https://pim-project-b8698.firebaseapp.com" data-hashtags="rijksmuseumdigital" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+
+		
+		</div>
 </center>
 
 </body>

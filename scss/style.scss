@@ -36,7 +36,7 @@ $light-blue: #485170;
 		@media (max-width: 900px) { @content; }
 	}
 	@else if $point == W768 {
-		@media (min-width: 768px) { @content; }
+		@media (max-width: 768px) { @content; }
 	}
 	@else if $point == M768 {
 		@media (min-width: 768px) { @content; }
@@ -233,10 +233,51 @@ h3 {
 	}
 }
 #amountCorrect {
-	margin-top: -20px;
 	color: #fff;
 }
-
+.smiley {
+	margin-top: -20px;
+    width: 90px;
+}
+.shareMe {
+	background-color: $dark-blue;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+	margin-top: 20px;
+	
+	@include bp(M768) {
+		width: 600px;
+	}
+	p {
+		margin-top: 9px;
+		margin-left: 20px;
+		color: #fff;
+		font-weight: 500;
+		float: left;
+	}
+	iframe#twitter-widget-0 {
+		margin-right: -120px;
+	}
+	iframe {
+		margin-right: -40px;
+		margin-top: 5px;
+	}
+	#twitterbutton {
+		margin-right: -40px;
+	}
+	@include bp(W768) {
+		p {
+			margin-left: 0px;
+		}
+		iframe {
+			margin-right: 0px;
+		}
+		iframe#twitter-widget-0 {
+			margin-right: 0px;
+		}
+	}
+}
 #inputfields {
 	margin-top: 40px !important;
 	width: 90%;
