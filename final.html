@@ -28,6 +28,13 @@
 
 	<!-- Lettertypes -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+
+	<!-- Facebook share data -->
+	<meta property="og:url"           content="https://pim-project-b8698.firebaseapp.com/" />
+  	<meta property="og:type"          content="website" />
+  	<meta property="og:title"         content="Het Nieuwe Rijksmuseum: The Digital Experience" />
+  	<meta property="og:description"   content="Beleef het Rijksmuseum op een nieuwe manier, ervaar het zelf in het Rijks!" />
+  	<meta property="og:image"         content="IMG/banner.jpg" />
 </head>
 
 <body onload = "scorebord()" class="animated slideInRight" id="main">
@@ -35,24 +42,39 @@
 <center>
 		<br>
 		<div id="amountCorrect"></div>
+		<script>
+			document.getElementById("amountCorrect").innerHTML = "Goed gedaan " + localStorage.nameplayer +  "! &#127881; <br />" + "Zoveel vragen had je goed: "+localStorage.correctCounter;
+		</script>
 		<div id="scorebord">
 			<button onclick= "setScorebord('day')" class="mc-circle" id='day'>Dag</button>
 			<button onclick= "setScorebord('month')" class="mc-circle" id='month'>Maand</button>
 			<button onclick= "setScorebord('year')" class="mc-circle" id='year'>Jaar</button>
 			<button onclick= "setScorebord('ever')" class="mc-circle" id='ever'>Altijd</button>
+			<br>
+			<table id="scorebord_day">
+			</table>
+			<table id="scorebord_month">
+			</table>
+			<table id="scorebord_year">
+			</table>
+			<table id="scorebord_ever">
+			</table>
 		</div>
-		<script>
-			document.getElementById("amountCorrect").innerHTML = "Goed gedaan " + localStorage.nameplayer +  "! &#127881; <br />" + "Zoveel vragen had je goed: "+localStorage.correctCounter;
-		</script>
-		<br>
-		<table id="scorebord_day">
-		</table>
-		<table id="scorebord_month">
-		</table>
-		<table id="scorebord_year">
-		</table>
-		<table id="scorebord_ever">
-		</table>
+		<!-- Load Facebook SDK for JavaScript
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	  
+		<!-- Your share button code -->
+		<!-- <div class="fb-share-button" 
+		  data-href="https://pim-project-b8698.firebaseapp.com/" 
+		  data-layout="button_count">
+		</div> -->
 </div>
 </center>
 

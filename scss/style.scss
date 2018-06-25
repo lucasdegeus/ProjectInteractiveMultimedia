@@ -199,19 +199,38 @@ h3 {
 	font-size: 20px !important;
 }
 #scorebord {
+	background-color: $dark-blue;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 20px;
 	button {
 		&:focus {
 			outline: none;
 		}
 	}
-	margin-top: 20px;
 	.mc-circle {
+		width: fit-content;
+		font-size: 16px;
+		font-weight: 500;
+		font-family: 'Montserrat', sans-serif;
 		height: 35px;
 		border-radius: 10px;
+		color: #fff !important;
+		background-color: unset !important;
+	}
+	@include bp(M768) {
+		width: 600px;
 	}
 }
 #scorebord_day, #scorebord_month, #scorebord_year, #scorebord_ever {
 	color: #fff;
+	margin: auto;
+	margin-top: 10px;
+	thead {
+		margin-bottom: 10px;
+
+	}
 }
 #amountCorrect {
 	margin-top: -20px;
@@ -280,7 +299,7 @@ h3 {
 			border-radius: 20px;
 			font-weight: 500;
 			margin-top: 20px;
-			font-family: 'Montserrat';
+			font-family: 'Montserrat', sans-serif;
 			&:hover {
 				background-color: $light-blue;
 				color: #fff;
