@@ -16,7 +16,6 @@ function startGame() {
 			countQuestion = 0
 			for (i in amountofquestions) {
 				countQuestion += 1;
-				console.log(countQuestion)
 			}
 			localStorage.setItem('amountofquestions', countQuestion)
 		})
@@ -124,7 +123,8 @@ function answerCheck() {
 		localStorage.setItem("correctCounter", newCorrectCounter);
 	}
 	else {
-		document.getElementById("result").innerHTML = "Helaas je had het fout, het goede antwoord was: <br>" + localStorage.fullwrittenCorrectAnswer
+		document.getElementById("result").innerHTML = "Helaas je had het fout, het goede antwoord was:"
+		document.getElementById("right_answer").innerHTML = localStorage.fullwrittenCorrectAnswer
 	}
 	document.getElementById('weetjeblock').innerHTML += localStorage.fact
 	document.getElementById("infoblock").innerHTML = localStorage.explaincorrect
@@ -171,10 +171,6 @@ function scorebord() {
 	head_day.setAttribute("id", "TableHead_day");
 	document.getElementById("scorebord_day").appendChild(head_day);
 	
-    // var y_day = document.createElement("TR");
-    // y_day.setAttribute("id", "myTr_day");
-    // document.getElementById("scorebord_day").appendChild(y_day);
-	
 	var body_day = document.createElement("TBODY");
 	body_day.setAttribute("id", "TableBody_day");
 	document.getElementById("scorebord_day").appendChild(body_day);
@@ -213,10 +209,6 @@ function scorebord() {
 	var head_month = document.createElement("THEAD");
 	head_month.setAttribute("id", "TableHead_month");
 	document.getElementById("scorebord_month").appendChild(head_month);
-	
-    // var y_month = document.createElement("TR");
-    // y_month.setAttribute("id", "myTr_month");
-    // document.getElementById("scorebord_month").appendChild(y_month);
 	
 	var body_month = document.createElement("TBODY");
 	body_month.setAttribute("id", "TableBody_month");
@@ -257,10 +249,6 @@ function scorebord() {
 	head_year.setAttribute("id", "TableHead_year");
 	document.getElementById("scorebord_year").appendChild(head_year);
 	
-    // var y_year = document.createElement("TR");
-    // y_year.setAttribute("id", "myTr_year");
-    // document.getElementById("scorebord_year").appendChild(y_year);
-	
 	var body_year = document.createElement("TBODY");
 	body_year.setAttribute("id", "TableBody_year");
 	document.getElementById("scorebord_year").appendChild(body_year);
@@ -299,10 +287,6 @@ function scorebord() {
 	var head = document.createElement("THEAD");
 	head.setAttribute("id", "TableHead");
 	document.getElementById("scorebord_ever").appendChild(head);
-	
-    // var y = document.createElement("TR");
-    // y.setAttribute("id", "myTr");
-    // document.getElementById("scorebord_ever").appendChild(y);
 	
 	var body = document.createElement("TBODY");
 	body.setAttribute("id", "TableBody");
@@ -369,13 +353,6 @@ $(document).ready(function(){
 		$("#routeWrapper").slideUp(400);
 	});
 });
-
-// function hideRoutebeschrijving() {
-// 	var closeRoute = document.getElementById("routeWrapper");
-// 	if (closeRoute.style.display ==="block") {
-// 		closeRoute.style.display = "none";
-// 	}
-// }
 
 function submitQuestion() {
 	if (document.getElementById("vraag").value != "" && document.getElementById("ans1").value != "" && document.getElementById("ans2").value != "" && document.getElementById("ans3").value != "" && document.getElementById("ans4").value != "" && document.getElementById("correct").value != "Correcte antwoord" && document.getElementById("info").value != "" && document.getElementById("routeb").value != "" && document.getElementById("difficulty").value != "Moeilijkheidsgraad") {
@@ -461,7 +438,6 @@ function setScorebord(time) {
 
 
 function objectfinderWithInput(objectCode) {
-	console.log('this is my input: ' + objectCode);
     $.get("https://www.rijksmuseum.nl/api/nl/collection/" + objectCode + "?key=W83gXGlp&format=json", function(data, status){
 		document.getElementById("painter").value = data.artObject.principalMakers[0].name;
 		document.getElementById("painting").value = data.artObject.title;
@@ -488,8 +464,7 @@ function objectfinderWithInput(objectCode) {
 function searchterm() {
 	if (document.getElementById("zoekterm").value != "") {
 	document.getElementById("possibleObjects").innerHTML = ""
-        $.get("https://www.rijksmuseum.nl/api/nl/collection?key=W83gXGlp&format=json&q=" + document.getElementById("zoekterm").value + "&s=relevance" ,function(data,status) {
-        	console.log(data);	
+        $.get("https://www.rijksmuseum.nl/api/nl/collection?key=W83gXGlp&format=json&q=" + document.getElementById("zoekterm").value + "&s=relevance" ,function(data,status) {	
         	if (data.artObjects.length != 0) {
         	for (i = 0; i < 7; i++) {
 				var TestFf = i
@@ -561,7 +536,6 @@ function searchterm() {
 				objectRow.appendChild(selectButton);
 				document.getElementById("possibleObjects").appendChild(objectRow); 
 
-				//Functie is veel te lang maar leek de enige oplossing te zijn.
 				$(function() {
 					$("#selectButton0").click(function() {
 						objectfinderWithInput(data.artObjects[0].objectNumber);
@@ -603,13 +577,6 @@ function searchterm() {
         	alert("Geen gegevens gevonden")
         }
 		});
-		
-   	// var y = document.getElementById("objectnummer");
-	// y.style.display = "block";
-	// var z = document.getElementById("submitObject");
-	// z.style.display = "block";
-		
-
 	}
 	else {
 		alert('Voer zoek gegevens in')
@@ -639,7 +606,6 @@ function showObjectfinder() {
 function objectfinder() {
 	if (document.getElementById("objectnummer").value != "") {
     $.get("https://www.rijksmuseum.nl/api/nl/collection/" + document.getElementById("objectnummer").value + "?key=W83gXGlp&format=json", function(data, status){
-		// console.log(data)
 		if (data.artObject != null) {
 		document.getElementById("painter").value = data.artObject.principalMakers[0].name;
 		document.getElementById("painting").value = data.artObject.title;
@@ -682,31 +648,19 @@ function sortTable(time) {
 	var table, rows, switching, i, x, y, shouldSwitch;
 	table = document.getElementById(time);
 	switching = true;
-	/*Make a loop that will continue until
-	no switching has been done:*/
 	while (switching) {
-	  //start by saying: no switching is done:
 	  switching = false;
 	  rows = table.getElementsByTagName("TR");	  
-	  /*Loop through all table rows (except the
-	  first, which contains table headers):*/
 	  for (i = 1; i < (rows.length - 1); i++) {
-		//start by saying there should be no switching:
 		shouldSwitch = false;
-		/*Get the two elements you want to compare,
-		one from current row and one from the next:*/
 		x = rows[i].getElementsByTagName("TD")[1];
 		y = rows[i + 1].getElementsByTagName("TD")[1];
-		//check if the two rows should switch place:
 		if (Number(x.innerHTML) < Number(y.innerHTML)) {
-		  //if so, mark as a switch and break the loop:
 		  shouldSwitch = true;
 		  break;
 		}
 	  }
 	  if (shouldSwitch) {
-		/*If a switch has been marked, make the switch
-		and mark that a switch has been done:*/
 		rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
 		switching = true;
 	  }
