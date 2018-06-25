@@ -539,7 +539,6 @@ function searchterm() {
 					var selectButton = document.createElement('button');
 					selectButton.id = 'selectButton'+i;
 					selectButton.innerHTML = "Kies";
-					objectRow.appendChild(selectButton);
 
         		if (data.artObjects[i].webImage != null) {
 				var imageWrapper = document.createElement('div');
@@ -549,9 +548,9 @@ function searchterm() {
 					elem.width = 50;
 				imageWrapper.appendChild(elem);	
 				objectRow.appendChild(imageWrapper);
+				objectRow.appendChild(selectButton);
 				objectRow.innerHTML += "<br>"
 				document.getElementById("possibleObjects").appendChild(objectRow);   
-				// document.getElementById("possibleObjects").innerHTML += "</div>"
 			}
 				else {
 				document.getElementById("possibleObjects").innerHTML += "Geen foto beschikbaar &emsp;"
@@ -600,10 +599,10 @@ function searchterm() {
         }
 		});
 		
-   	var y = document.getElementById("objectnummer");
-	y.style.display = "block";
-	var z = document.getElementById("submitObject");
-	z.style.display = "block";
+   	// var y = document.getElementById("objectnummer");
+	// y.style.display = "block";
+	// var z = document.getElementById("submitObject");
+	// z.style.display = "block";
 		
 
 

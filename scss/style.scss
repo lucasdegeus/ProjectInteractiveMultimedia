@@ -233,7 +233,7 @@ h3 {
 		border-radius: 5px;
 		margin-top: 10px;
 		float: right;
-		margin-top: -75px;
+	    margin-top: -55px;
 		@include bp(W900) {
 			margin-left: 0px;
 			float: unset !important;
@@ -248,6 +248,21 @@ h3 {
 		border-radius: 10px;
 		padding: 20px;
 		min-height: 130px;
+		button {
+			background-color: #FFF;
+			border: none;
+			color: #2D3555;
+			font-size: 20px;
+			width: 100%;
+			border-radius: 20px;
+			font-weight: 500;
+			margin-top: 20px;
+			font-family: 'Montserrat';
+			&:hover {
+				background-color: $light-blue;
+				color: #fff;
+			}
+		}
 	}
 	.imageWrapper {
 		@include bp(W900) {
