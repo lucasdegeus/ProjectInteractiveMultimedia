@@ -195,6 +195,30 @@ h3 {
 		}
 	}
 }
+#final-header {
+	font-size: 20px !important;
+}
+#scorebord {
+	button {
+		&:focus {
+			outline: none;
+		}
+	}
+	margin-top: 20px;
+	.mc-circle {
+		height: 35px;
+		border-radius: 10px;
+	}
+}
+#amountCorrect {
+	margin-top: -20px;
+	color: #fff;
+}
+
+table {
+    color: #fff;
+}
+
 #inputfields {
 	margin-top: 40px !important;
 	width: 90%;
