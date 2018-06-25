@@ -601,7 +601,7 @@ button {
   transition: all 0.4s ease;
 }
 
-/* line 487, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 488, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #passed-questions {
   background-color: #E7788B;
   border-radius: 100px;
@@ -609,13 +609,13 @@ button {
   width: 0%;
 }
 
-/* line 493, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 494, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #currentQuestion {
   text-align: center;
   color: #F6DFB7;
 }
 
-/* line 497, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 498, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #totalQuestions {
   margin: auto;
   padding-left: 40%;
@@ -624,7 +624,7 @@ button {
   color: #E7788B;
 }
 
-/* line 504, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 505, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #routeWrapper {
   -webkit-transition: all 0s ease;
   -moz-transition: all 0s ease;
@@ -637,7 +637,7 @@ button {
   background-color: #2b3558;
 }
 
-/* line 515, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 516, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #routebeschrijving {
   text-align: center;
   color: #fff;
@@ -645,7 +645,7 @@ button {
   margin-top: 20px;
 }
 
-/* line 521, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 522, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #route {
   font-family: 'Montserrat', sans-serif;
   font-size: 19px;
@@ -661,24 +661,24 @@ button {
 }
 
 @media (min-width: 768px) {
-  /* line 521, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+  /* line 522, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
   #route {
     width: 600px;
   }
 }
 
-/* line 536, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 537, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #route:focus {
   outline: none;
 }
 
-/* line 539, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 540, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #route:hover {
   background-color: #2b3558;
   color: #fff;
 }
 
-/* line 544, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 545, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #close-route {
   margin: auto;
   background-color: #fff;
@@ -693,18 +693,18 @@ button {
   border-radius: 80px;
 }
 
-/* line 556, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 557, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #close-route:focus {
   outline: none;
 }
 
-/* line 559, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 560, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #close-route:hover {
   background-color: #2b3558;
   color: #fff;
 }
 
-/* line 565, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 566, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
@@ -714,7 +714,7 @@ h1 {
   margin-top: 2%;
 }
 
-/* line 574, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 575, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #loopinstructies {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
@@ -724,12 +724,12 @@ h1 {
   position: center;
 }
 
-/* line 583, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 584, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #inputfields_workers {
   text-align: center;
 }
 
-/* line 585, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 586, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #inputfields_workers input, #inputfields_workers select {
   font-family: 'Montserrat', sans-serif;
   text-align-last: center;
@@ -747,12 +747,12 @@ h1 {
   font-weight: 500;
 }
 
-/* line 600, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 601, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #inputfields_workers input::placeholder, #inputfields_workers select::placeholder {
   color: #485170;
 }
 
-/* line 603, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
+/* line 604, /Users/maxdefroe/stack/Studie/Project Interactive Multimedia/Project/github/scss/style.scss */
 #inputfields_workers input:focus, #inputfields_workers select:focus {
   outline: none;
 }
