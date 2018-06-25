@@ -45,7 +45,7 @@ function receiveData() {
 		languageDifficulty = "moeilijk"
 	}
 	if (localStorage.firstLoad == "true") {
-		document.getElementById("container").innerHTML = "Welkom " + localStorage.nameplayer + '! Je hebt gekozen voor level: ' + languageDifficulty;
+		document.getElementById("container").innerHTML = "Welkom " + localStorage.nameplayer + '! Je hebt gekozen voor de moeilijkheidsgraad ' + languageDifficulty;
 		localStorage.setItem("firstLoad", "false");
 	}
 	progressLoad();
