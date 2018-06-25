@@ -124,7 +124,8 @@ function answerCheck() {
 		localStorage.setItem("correctCounter", newCorrectCounter);
 	}
 	else {
-		document.getElementById("result").innerHTML = "Helaas je had het fout, het goede antwoord was: <br>" + localStorage.fullwrittenCorrectAnswer
+		document.getElementById("result").innerHTML = "Helaas je had het fout, het goede antwoord was: <br>" 
+			localStorage.fullwrittenCorrectAnswer
 	}
 	document.getElementById('weetjeblock').innerHTML += localStorage.fact
 	document.getElementById("infoblock").innerHTML = localStorage.explaincorrect
