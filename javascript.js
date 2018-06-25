@@ -16,7 +16,7 @@ function startGame() {
 			countQuestion = 0
 			for (i in amountofquestions) {
 				countQuestion += 1;
-				console.log(countQuestion)
+				// console.log(countQuestion)
 			}
 			localStorage.setItem('amountofquestions', countQuestion)
 		})
@@ -460,7 +460,7 @@ function setScorebord(time) {
 
 
 function objectfinderWithInput(objectCode) {
-	console.log('this is my input: ' + objectCode);
+	//console.log('this is my input: ' + objectCode);
     $.get("https://www.rijksmuseum.nl/api/nl/collection/" + objectCode + "?key=W83gXGlp&format=json", function(data, status){
 		document.getElementById("painter").value = data.artObject.principalMakers[0].name;
 		document.getElementById("painting").value = data.artObject.title;
