@@ -132,29 +132,29 @@ function answerCheck() {
 
 
 function saveScore() {
-  	var ydataObject = null
-  	const newydataObject = firebase.database().ref().child('Players');
-  	newydataObject.on('value', snap => {
-  		amountofplayers = snap.val();
-  		countPlayers = 0
-  		for (i in amountofplayers) {
-  			countPlayers += 1;
-  		}
-  		localStorage.setItem('amountofplayers', countPlayers)
-  	})
-
-
+	var ydataObject = null
+	const newydataObject = firebase.database().ref().child('Players');
+	newydataObject.on('value', snap => {
+	  amountofplayers = snap.val();
+	  countPlayers = 0
+	  for (i in amountofplayers) {
+		  countPlayers += 1;
+	  }
+	  localStorage.setItem('amountofplayers', countPlayers)
+	  })
+	var xdataObject = firebase.database().ref().child("Players");
+	var newChild = Number(Number(localStorage.amountofplayers) + 2)
 	var d = new Date();
 	currentMonth = d.getMonth();
 	currentDay = d.getDate();
 	currentYear = d.getFullYear();
 	var xdataObject = firebase.database().ref().child("Players");
-	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Score").set(localStorage.correctCounter)
-	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Name").set(localStorage.nameplayer)
-	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
-	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Day").set(currentDay)
-	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Month").set(currentMonth)
-	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Year").set(currentYear)
+	xdataObject.child(newChild).child("Score").set(localStorage.correctCounter)
+	xdataObject.child(newChild).child("Name").set(localStorage.nameplayer)
+	xdataObject.child(newChild).child("Difficulty").set(localStorage.difficulty)
+	xdataObject.child(newChild).child("Day").set(currentDay)
+	xdataObject.child(newChild).child("Month").set(currentMonth)
+	xdataObject.child(newChild).child("Year").set(currentYear)
 }
 
 		
