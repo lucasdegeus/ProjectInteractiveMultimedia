@@ -23,7 +23,7 @@
     var routeData = data.route;
     var route = routeData.split("BREAK");
     var i = 0;
-    document.getElementById("routebeschrijving").innerHTML = data.painter;
+    document.getElementById("routebeschrijving").innerHTML = "Loop naar het volgende object: " + data.painting + "<br>" + "<br>" + "Route:" + "<br>";
     for (i in route) {
       document.getElementById("routebeschrijving").innerHTML += (route[i]) + "<br>";
     };
