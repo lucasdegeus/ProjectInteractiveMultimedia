@@ -57,8 +57,8 @@ function progressLoad() {
 	var currentQuestion = localStorage.counter
 	var progressPercentage = currentQuestion / totalQuestions * 100;
 	document.getElementById("passed-questions").style.width = progressPercentage + "%";
-	document.getElementById("currentQuestion").innerHTML = currentQuestion;
-	document.getElementById("totalQuestions").innerHTML = totalQuestions;
+	// document.getElementById("currentQuestion").innerHTML = currentQuestion;
+	// document.getElementById("totalQuestions").innerHTML = totalQuestions;
 	document.getElementById("totalQuestions").style.paddingLeft = progressPercentage + "%";
 }
 
@@ -124,7 +124,8 @@ function answerCheck() {
 		localStorage.setItem("correctCounter", newCorrectCounter);
 	}
 	else {
-		document.getElementById("result").innerHTML = "Helaas je had het fout, het goede antwoord was: <br>" + localStorage.fullwrittenCorrectAnswer
+		document.getElementById("result").innerHTML = "Helaas je had het fout, het goede antwoord was: <br>" 
+			localStorage.fullwrittenCorrectAnswer
 	}
 	document.getElementById('weetjeblock').innerHTML += localStorage.fact
 	document.getElementById("infoblock").innerHTML = localStorage.explaincorrect

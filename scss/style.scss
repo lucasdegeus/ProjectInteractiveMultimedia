@@ -210,13 +210,12 @@ h3 {
 		border-radius: 10px;
 	}
 }
+#scorebord_day, #scorebord_month, #scorebord_year, #scorebord_ever {
+	color: #fff;
+}
 #amountCorrect {
 	margin-top: -20px;
 	color: #fff;
-}
-
-table {
-    color: #fff;
 }
 
 #inputfields {
@@ -485,6 +484,7 @@ table {
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
+
 #passed-questions {
 	background-color: #E7788B;
 	border-radius: 100px;
