@@ -134,13 +134,14 @@ function answerCheck() {
 function saveScore() {
   	var ydataObject = null
   	const newydataObject = firebase.database().ref().child('Players');
-  	newydataObject.on('value', snap => {
-  		amountofplayers = snap.val();
+  	newydataObject.on('value', function(snapshot) {
+		amountofplayers = snapshot.val();
   		countPlayers = 0
-  		for (i in amountofplayers) {
+  		for (i in snapshot.val()) {
   			countPlayers += 1;
   		}
-  		localStorage.setItem('amountofplayers', countPlayers)
+		  localStorage[amountofplayers] = countPlayers
+
   	})
 
 
