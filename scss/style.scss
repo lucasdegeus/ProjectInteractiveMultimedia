@@ -386,10 +386,15 @@ h3 {
 #infoblock {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 19px;
-	margin-top: 20px;
+	margin-top: 30px;
 	font-weight: 400;
+	width: 90%;
+	margin: auto;
 	text-align:center;
 	color: #fff;
+	@include bp(M768) {
+		width: 700px;
+	}
 }
 #weetjeblock {
 	font-family: 'Montserrat', sans-serif;
