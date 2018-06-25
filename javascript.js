@@ -16,7 +16,7 @@ function startGame() {
 			countQuestion = 0
 			for (i in amountofquestions) {
 				countQuestion += 1;
-				// console.log(countQuestion)
+				console.log(countQuestion)
 			}
 			localStorage.setItem('amountofquestions', countQuestion)
 		})
@@ -57,8 +57,8 @@ function progressLoad() {
 	var currentQuestion = localStorage.counter
 	var progressPercentage = currentQuestion / totalQuestions * 100;
 	document.getElementById("passed-questions").style.width = progressPercentage + "%";
-	// document.getElementById("currentQuestion").innerHTML = currentQuestion;
-	// document.getElementById("totalQuestions").innerHTML = totalQuestions;
+	document.getElementById("currentQuestion").innerHTML = currentQuestion;
+	document.getElementById("totalQuestions").innerHTML = totalQuestions;
 	document.getElementById("totalQuestions").style.paddingLeft = progressPercentage + "%";
 }
 
@@ -132,29 +132,29 @@ function answerCheck() {
 
 
 function saveScore() {
-	var ydataObject = null
-	const newydataObject = firebase.database().ref().child('Players');
-	newydataObject.on('value', snap => {
-	  amountofplayers = snap.val();
-	  countPlayers = 0
-	  for (i in amountofplayers) {
-		  countPlayers += 1;
-	  }
-	  localStorage.setItem('amountofplayers', countPlayers)
-	  })
-	var xdataObject = firebase.database().ref().child("Players");
-	var newChild = Number(Number(localStorage.amountofplayers) + 2)
+  	var ydataObject = null
+  	const newydataObject = firebase.database().ref().child('Players');
+  	newydataObject.on('value', snap => {
+  		amountofplayers = snap.val();
+  		countPlayers = 0
+  		for (i in amountofplayers) {
+  			countPlayers += 1;
+  		}
+  		localStorage.setItem('amountofplayers', countPlayers)
+  	})
+
+
 	var d = new Date();
 	currentMonth = d.getMonth();
 	currentDay = d.getDate();
 	currentYear = d.getFullYear();
 	var xdataObject = firebase.database().ref().child("Players");
-	xdataObject.child(newChild).child("Score").set(localStorage.correctCounter)
-	xdataObject.child(newChild).child("Name").set(localStorage.nameplayer)
-	xdataObject.child(newChild).child("Difficulty").set(localStorage.difficulty)
-	xdataObject.child(newChild).child("Day").set(currentDay)
-	xdataObject.child(newChild).child("Month").set(currentMonth)
-	xdataObject.child(newChild).child("Year").set(currentYear)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Score").set(localStorage.correctCounter)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Name").set(localStorage.nameplayer)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Difficulty").set(localStorage.difficulty)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Day").set(currentDay)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Month").set(currentMonth)
+	xdataObject.child(Number(localStorage.amountofplayers)+1).child("Year").set(currentYear)
 }
 
 		
@@ -460,7 +460,7 @@ function setScorebord(time) {
 
 
 function objectfinderWithInput(objectCode) {
-	//console.log('this is my input: ' + objectCode);
+	console.log('this is my input: ' + objectCode);
     $.get("https://www.rijksmuseum.nl/api/nl/collection/" + objectCode + "?key=W83gXGlp&format=json", function(data, status){
 		document.getElementById("painter").value = data.artObject.principalMakers[0].name;
 		document.getElementById("painting").value = data.artObject.title;
