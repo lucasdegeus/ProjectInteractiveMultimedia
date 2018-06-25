@@ -124,9 +124,10 @@ function answerCheck() {
 		localStorage.setItem("correctCounter", newCorrectCounter);
 	}
 	else {
-		document.getElementById("result").innerHTML = "Helaas je had het fout, het goede antwoord was: " + localStorage.correctAnswer
+		document.getElementById("result").innerHTML = "Helaas je had het fout, het goede antwoord was: <br>" + localStorage.fullwrittenCorrectAnswer
 	}
-	document.getElementById("infoblock").innerHTML = localStorage.info
+	document.getElementById('weetjeblock').innerHTML += localStorage.fact
+	document.getElementById("infoblock").innerHTML = localStorage.explaincorrect
 }
 
 
@@ -487,8 +488,8 @@ function searchterm() {
 	if (document.getElementById("zoekterm").value != "") {
 	document.getElementById("possibleObjects").innerHTML = ""
         $.get("https://www.rijksmuseum.nl/api/nl/collection?key=W83gXGlp&format=json&q=" + document.getElementById("zoekterm").value + "&s=relevance" ,function(data,status) {
-        	// console.log(data);	
-        	if (data.artObjects.length != null) {
+        	console.log(data);	
+        	if (data.artObjects.length != 0) {
         	for (i = 0; i < 7; i++) {
 				var TestFf = i
 				var objectRow = document.createElement('div');
