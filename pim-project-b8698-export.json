@@ -1,14 +1,17 @@
-{
+﻿{
   "EasyQ" : {
     "Q1" : {
       "A1" : "De burgermeester van Amsterdam en zijn werknemers",
-      "A2" : "De burgerwacht van Amsterdam",
+      "A2" : "De schutterscompagnie van de Amsterdamse Wijk II,",
       "A3" : "De bewakers van de Koning",
       "A4" : "Rijke handelaren",
       "Q" : "Wie staan er afgebeeld op de nachtwacht?",
       "correct" : "b",
-      "info" : "Wist je dat Rembrandt zichzelf in het schilderij heeft geschilderd?",
-      "object" : "De Nachtwacht",
+      "explaincorrect" : "Op de Nachtwacht staat de schutterscompagnie van de Amsterdamse Wijk II, zij bewaakten de stad.",
+      "fact" : "Wist je dat Rembrandt zichzelf in het schilderij heeft geschilderd?",
+      "info" : "Het korporaalschap van kapitein Frans Banninck Cocq en luitenant Willem van Ruytenburch, bekend als de 'Nachtwacht'. Schutters van de kloveniersdoelen uit een poort naar buiten tredend. Op een schild aangebracht naast de poort staan de namen van de afgebeelde personen: Frans Banning Cocq, heer van purmerlant en Ilpendam, Capiteijn Willem van Ruijtenburch van Vlaerdingen, heer van Vlaerdingen, Lu[ij]tenant, Jan Visscher Cornelisen Vaendrich, Rombout Kemp Sergeant, Reijnier Engelen Sergeant, Barent Harmansen, Jan Adriaensen Keyser, Elbert Willemsen, Jan Clasen Leydeckers, Jan Ockersen, Jan Pietersen bronchorst, Harman Iacobsen wormskerck, Jacob Dircksen de Roy, Jan vander heede, Walich Schellingwou, Jan brugman, Claes van Cruysbergen, Paulus Schoonhoven. De schutters zijn gewapend met lansen, musketten en hellebaarden. Rechts de tamboer met een grote trommel. Tussen de soldaten links staat een meisje met een dode kip om haar middel, rechts een blaffende hond. Linksboven de vaandrig met de uitgestoken vaandel.",
+      "painter" : "Rembrandt van Rijn",
+      "painting" : "De Nachtwacht",
       "route" : "Vanaf de ingang rechtdoorBREAKGa naar linksBREAKGa de trap opBREAKU bent er"
     },
     "Q2" : {
@@ -18,7 +21,11 @@
       "A4" : "De zwaan zingt",
       "Q" : "Wat doet de Zwaan",
       "correct" : "a",
-      "info" : "De zwaan verdedigd zijn nest tegen een hond",
+      "explaincorrect" : "De zwaan verdedigd zijn nest tegen een hond, als je goed kijkt zie je dat in het nest de text Holland staat, de zwaan verdedigt dus zijn vaderland",
+      "fact" : "Wist je dat de zwaan symbool staat voor Johan de Witt?",
+      "info" : "De bedreigde zwaan. Een zwaan verdedigt haar nest met eieren tegen een hond. De voorstelling heeft een politieke allegorische interpretatie gekregen doordat de zwaan is aangeduid als de raadpensionaris Johan de Witt, die Holland beschermt tegen de vijand.",
+      "painter" : "Jan Asselijn",
+      "painting" : "De Bedreigde Zwaan",
       "route" : "Hier komt nog een route"
     },
     "Q3" : {
@@ -28,7 +35,11 @@
       "A4" : "Marie Antoinette",
       "Q" : "Van wie is dit beeld?",
       "correct" : "c",
-      "info" : "Vanaf onder recht in de ogen van Maria kijken geeft een ander perspectief aan dit beeld",
+      "explaincorrect" : "Dit is Maria, ze kijkt zo bedroeft omdat dit het moment is dat Jezus is overleden",
+      "fact" : "Wist je dat, als je door je kniknieën gaat, ze je direct aankijkt? Dit geeft het beeld veel meer impact.",
+      "info" : "Deze indringende buste van Maria, bedroefd om haar gestorven zoon Jezus, werd waarschijnlijk gemaakt door Pietro Torrigiani, een in Brugge wonende Italiaan in dienst van aartshertogin Margaretha van Oostenrijk. Voor Margaretha, zelf een treurende weduwe, had het thema van Maria’s rouw grote betekenis. Door het levensechte karakter van het beeld was het gemakkelijk zich in Maria’s verdriet in te leven",
+      "painter" : "Pietro Torrigiani",
+      "painting" : "Mater Dolorosa",
       "route" : "Vanaf de ingang rechtdoorBREAKGa naar linksBREAKGa de trap opBREAKU bent er"
     },
     "Q4" : {
@@ -38,8 +49,12 @@
       "A4" : "De arbeidster",
       "Q" : "De benaming melkmeisje klopt niet helemaal, wat is de correcte benaming voor degene die hier wordt afgebeeld?",
       "correct" : "c",
-      "info" : "De groep Nestlé gebruikt Het melkmeisje onder de Franse naam La Laitière als een commercieel merk",
-      "route" : "Hier komt een routebeschrijving"
+      "explaincorrect" : "Het is eigenlijk de dienstmeid die de melk inschenkt, een melkmeisje was iemand die de melk verkocht.",
+      "fact" : "Wist je dat Nestlé Het Melkmeisje gebruikt onder de Franse naam La Laitière als een commercieel merk?",
+      "info" : "Een dienstmaagd staat achter een tafel en schenkt melk uit een melkkan in een kookpot. Op de tafel staat een mand met brood en een stenen kruik, links een venster met een rieten mand en een koperen pot. Onderaan de muur rechts een rijtje tegels en een stoofje.",
+      "painter" : "Johannes Vermeer",
+      "painting" : "Het Melkmeisje",
+      "route" : "Vanaf de ingang rechtdoorBREAKGa naar linksBREAKGa de trap opBREAKU bent er"
     },
     "Q5" : {
       "A1" : "Frederick Taylor",
@@ -48,8 +63,12 @@
       "A4" : "Willem van Oranje",
       "Q" : "Wie staat er op dit schilderij?",
       "correct" : "d",
-      "info" : "De plek waar Willem van Oranje is vermoord is nog steeds te bezoeken!",
-      "route" : "route"
+      "explaincorrect" : "Het is Willem I prins van Oranje, hij was de leider van de opstand tegen het gezag van Filips II.",
+      "fact" : "Wist je dat de plek waar Willem van Oranje vermoord is nog steeds te bezoeken is?",
+      "info" : "Portret van Willem I, prins van Oranje, genaamd Willem de Zwijger. Buste, naar rechts.",
+      "painter" : "Adriaen Thomasz",
+      "painting" : "Een schilderij van Adriaen Thomasz Key",
+      "route" : "Vanaf de ingang rechtdoorBREAKGa naar linksBREAKGa de trap opBREAKU bent er"
     }
   },
   "HardQ" : {
@@ -60,8 +79,11 @@
       "A4" : "De prinses van Holland",
       "Q" : "Voor wie staat het belichte meisje symbool op De Nachtwacht?",
       "correct" : "b",
-      "info" : "\"Wist je dat Rembrandt zichzelf in het schilderij heeft geschilderd?\"",
-      "object" : "De Nachtwacht",
+      "explaincorrect" : "Het meisje is de mascotte van de burgerwacht, maar men zegt dat ze symbool staat voor de vrouw van Rembrandt, als je goed kijkt zie je bij haar voet het jaartal staan dat zijn vrouw overleed.",
+      "info" : "Het korporaalschap van kapitein Frans Banninck Cocq en luitenant Willem van Ruytenburch, bekend als de 'Nachtwacht'. Schutters van de kloveniersdoelen uit een poort naar buiten tredend. Op een schild aangebracht naast de poort staan de namen van de afgebeelde personen: Frans Banning Cocq, heer van purmerlant en Ilpendam, Capiteijn Willem van Ruijtenburch van Vlaerdingen, heer van Vlaerdingen, Lu[ij]tenant, Jan Visscher Cornelisen Vaendrich, Rombout Kemp Sergeant, Reijnier Engelen Sergeant, Barent Harmansen, Jan Adriaensen Keyser, Elbert Willemsen, Jan Clasen Leydeckers, Jan Ockersen, Jan Pietersen bronchorst, Harman Iacobsen wormskerck, Jacob Dircksen de Roy, Jan vander heede, Walich Schellingwou, Jan brugman, Claes van Cruysbergen, Paulus Schoonhoven. De schutters zijn gewapend met lansen, musketten en hellebaarden. Rechts de tamboer met een grote trommel. Tussen de soldaten links staat een meisje met een dode kip om haar middel, rechts een blaffende hond. Linksboven de vaandrig met de uitgestoken vaandel.",
+      "painter" : "Rembrandt van Rijn",
+	  "fact" : "Wist je dat Rembrandt zichzelf in het schilderij heeft geschilderd?",
+      "painting" : "De Nachtwacht",
       "route" : "\"Vanaf de ingang rechtdoorBREAKGa naar linksBREAKGa de trap opBREAKU bent er\""
     },
     "Q2" : {
@@ -71,7 +93,11 @@
       "A4" : "Cornelis de Graeff",
       "Q" : "Wie symboliseert de zwaan?",
       "correct" : "c",
-      "info" : "De zwaan verdedigd zijn nest tegen een hond",
+      "explaincorrect" : "De zwaan staat symbool voor Johan de Witt, hij verdedigt zijn vaderland, kijk maar in het nest, daar staat de tekst 'Holland'.",
+	  "info" : "De bedreigde zwaan. Een zwaan verdedigt haar nest met eieren tegen een hond. De voorstelling heeft een politieke allegorische interpretatie gekregen doordat de zwaan is aangeduid als de raadpensionaris Johan de Witt, die Holland beschermt tegen de vijand.",
+      "painter" : "Jan Asselijn",
+      "fact" : "Wist je dat de zwaan in het schilderij een hond verjaagd?",
+      "painting" : "De Bedreigde Zwaan",
       "route" : "Hier komt een route"
     },
     "Q3" : {
@@ -81,7 +107,11 @@
       "A4" : "1600-1605",
       "Q" : "Geef een schatting van wanneer dit beeld is gemaakt?",
       "correct" : "a",
-      "info" : "Vanaf onder recht in de ogen van Maria kijken geeft een ander perspectief aan dit beeld",
+      "explaincorrect" : "Dit is Maria, ze kijkt zo bedroeft omdat dit het moment is dat Jezus is overleden",
+      "fact" : "Wist je dat, als je door je kniknieën gaat, ze je direct aankijkt? Dit geeft het beeld veel meer impact.",
+	  "info" : "Deze indringende buste van Maria, bedroefd om haar gestorven zoon Jezus, werd waarschijnlijk gemaakt door Pietro Torrigiani, een in Brugge wonende Italiaan in dienst van aartshertogin Margaretha van Oostenrijk. Voor Margaretha, zelf een treurende weduwe, had het thema van Maria’s rouw grote betekenis. Door het levensechte karakter van het beeld was het gemakkelijk zich in Maria’s verdriet in te leven",
+      "painter" : "Pietro Torrigiani",
+      "painting" : "Mater Dolorosa",
       "route" : "Hier komt een routebeschrijving"
     },
     "Q4" : {
@@ -89,9 +119,13 @@
       "A2" : "Een raam",
       "A3" : "Een kast",
       "A4" : "Een mand",
-      "Q" : "Welk object was eerst achter het meisje geschilderd?",
+      "Q" : "Welk painting was eerst achter het meisje geschilderd?",
       "correct" : "a",
-      "info" : "De groep Nestlé gebruikt Het melkmeisje onder de Franse naam La Laitière als een commercieel merk",
+      "explaincorrect" : "Doormiddel van infrarood zijn ze er achter gekomen dat er eerst een schilderij aan de muur was geschilderd.",
+      "fact" : "Wist je dat Nestlé Het Melkmeisje gebruikt onder de Franse naam La Laitière als een commercieel merk?",
+	  "info" : "Een dienstmaagd staat achter een tafel en schenkt melk uit een melkkan in een kookpot. Op de tafel staat een mand met brood en een stenen kruik, links een venster met een rieten mand en een koperen pot. Onderaan de muur rechts een rijtje tegels en een stoofje.",
+      "painter" : "Johannes Vermeer",
+      "painting" : "Het Melkmeisje",
       "route" : "Hier komt een routebeschrijving"
     },
     "Q5" : {
@@ -101,7 +135,11 @@
       "A4" : "Willem III",
       "Q" : "Door wie werd Willem van Oranje vermoord?",
       "correct" : "a",
-      "info" : "De plek waar Willem van Oranje is vermoord is nog steeds te bezoeken!",
+      "explaincorrect" : "Balthasar Gerards heeft hem neergeschoten",
+      "fact" : "Wist je dat de plek waar Willem van oranje vermoord is nog steeds te bezoeken is?",
+	  "info" : "Portret van Willem I, prins van Oranje, genaamd Willem de Zwijger. Buste, naar rechts.",
+      "painter" : "Adriaen Thomasz",
+      "painting" : "Willem van Oranje",
       "route" : "route"
     }
   },
@@ -113,8 +151,11 @@
       "A4" : "Rembrandt heeft de mensen realistisch geschilderd",
       "Q" : "Wat is een kenmerkend verschil tussen De Nachtwacht en andere schilderijen in deze ruimte?",
       "correct" : "d",
-      "info" : "\"Wist je dat Rembrandt zichzelf in het schilderij heeft geschilderd?\"",
-      "object" : "De Nachtwacht",
+      "explaincorrect" : "Rembrandt was een van de weinigen die de mensen op het schilderij uitbeeldde zoals ze er uitzagen. Kijk maar eens rond in deze zaal, je zult zien dat op de andere schilderijen de schutters een gladde huid hebben terwijl dit op de Nachtwacht heel anders is.",
+      "fact" : "\"Wist je dat Rembrandt zichzelf in het schilderij heeft geschilderd?\"",
+      "info" : "Het korporaalschap van kapitein Frans Banninck Cocq en luitenant Willem van Ruytenburch, bekend als de 'Nachtwacht'. Schutters van de kloveniersdoelen uit een poort naar buiten tredend. Op een schild aangebracht naast de poort staan de namen van de afgebeelde personen: Frans Banning Cocq, heer van purmerlant en Ilpendam, Capiteijn Willem van Ruijtenburch van Vlaerdingen, heer van Vlaerdingen, Lu[ij]tenant, Jan Visscher Cornelisen Vaendrich, Rombout Kemp Sergeant, Reijnier Engelen Sergeant, Barent Harmansen, Jan Adriaensen Keyser, Elbert Willemsen, Jan Clasen Leydeckers, Jan Ockersen, Jan Pietersen bronchorst, Harman Iacobsen wormskerck, Jacob Dircksen de Roy, Jan vander heede, Walich Schellingwou, Jan brugman, Claes van Cruysbergen, Paulus Schoonhoven. De schutters zijn gewapend met lansen, musketten en hellebaarden. Rechts de tamboer met een grote trommel. Tussen de soldaten links staat een meisje met een dode kip om haar middel, rechts een blaffende hond. Linksboven de vaandrig met de uitgestoken vaandel.",
+      "painter" : "Rembrandt van Rijn",
+	  "painting" : "De Nachtwacht",
       "route" : "\"Vanaf de ingang rechtdoorBREAKGa naar linksBREAKGa de trap opBREAKU bent er\""
     },
     "Q2" : {
@@ -124,7 +165,11 @@
       "A4" : "Natuur",
       "Q" : "Wat symboliseert het nest dat de zwaan verdedigd?",
       "correct" : "b",
-      "info" : "\"De zwaan verdedigd zijn nest tegen een hond\"",
+      "explaincorrect" : "Als je goed kijkt dan zie je dat er op het nest de tekst 'Holland' staat. De zwaan verdedigd dus zijn vaderland.",
+      "fact" : "Wist je dat de zwaan symbool staat voor Johan de Witt?",
+      "info" : "De bedreigde zwaan. Een zwaan verdedigt haar nest met eieren tegen een hond. De voorstelling heeft een politieke allegorische interpretatie gekregen doordat de zwaan is aangeduid als de raadpensionaris Johan de Witt, die Holland beschermt tegen de vijand.",
+      "painter" : "Jan Asselijn",
+	  "painting" : "De Bedreigde Zwaan",
       "route" : "Hier komt een route"
     },
     "Q3" : {
@@ -134,7 +179,11 @@
       "A4" : "Het volk komt in opstand",
       "Q" : "Waarom is Maria zo bedroefd?",
       "correct" : "b",
-      "info" : "Vanaf onder recht in de ogen van Maria kijken geeft een ander perspectief aan dit beeld",
+      "explaincorrect" : "Ze kijkt zo bedroeft omdat dit het moment is dat Jezus is overleden",
+      "fact" : "Wist je dat, als je door je kniknieën gaat, ze je direct aankijkt? Dit geeft het beeld veel meer impact.",
+	  "info" : "Deze indringende buste van Maria, bedroefd om haar gestorven zoon Jezus, werd waarschijnlijk gemaakt door Pietro Torrigiani, een in Brugge wonende Italiaan in dienst van aartshertogin Margaretha van Oostenrijk. Voor Margaretha, zelf een treurende weduwe, had het thema van Maria’s rouw grote betekenis. Door het levensechte karakter van het beeld was het gemakkelijk zich in Maria’s verdriet in te leven",
+      "painter" : "Pietro Torrigiani",
+      "painting" : "Mater Dolorosa",
       "route" : "Hier komt route"
     },
     "Q4" : {
@@ -144,7 +193,11 @@
       "A4" : "Geen van bovenstaande",
       "Q" : "Waarom staat het meisje in het midden afgebeeld?",
       "correct" : "c",
-      "info" : "De groep Nestlé gebruikt Het melkmeisje onder de Franse naam La Laitière als een commercieel merk",
+      "explaincorrect" : "Het meisje is zo geschilderd zodat ze precies in de ligt bundel staat.",
+      "fact" : "Wist je dat Nestlé Het Melkmeisje gebruikt onder de Franse naam La Laitière als een commercieel merk?",
+	  "info" : "Een dienstmaagd staat achter een tafel en schenkt melk uit een melkkan in een kookpot. Op de tafel staat een mand met brood en een stenen kruik, links een venster met een rieten mand en een koperen pot. Onderaan de muur rechts een rijtje tegels en een stoofje.",
+      "painter" : "Johannes Vermeer",
+      "painting" : "Het Melkmeisje",
       "route" : "Hier komt een route beschrijving"
     },
     "Q5" : {
@@ -154,33 +207,70 @@
       "A4" : "William Silent",
       "Q" : "Op het schilderij zie je Willem van Oranje, wat was zijn bijnaam?",
       "correct" : "d",
-      "info" : "De plek waar Willem van Oranje is vermoord is nog steeds te bezoeken!",
+      "explaincorrect" : "Zijn bijnaam was William the Silent, omdat hij nooit te veel woorden gebruikte.",
+      "fact" : "Wist je dat de plek waar Willem van oranje vermoord is nog steeds te bezoeken is?",
+	  "info" : "Portret van Willem I, prins van Oranje, genaamd Willem de Zwijger. Buste, naar rechts.",
+      "painter" : "Adriaen Thomasz",
+      "painting" : "Willem van Oranje",
       "route" : "route"
     }
   },
-  "Players" : [ null, {
-    "Day" : 16,
-    "Difficulty" : "MediumQ",
-    "Month" : 6,
-    "Name" : "Max",
-    "Score" : 1
-  }, {
-    "Day" : 16,
-    "Difficulty" : "MediumQ",
-    "Month" : 6,
-    "Name" : "Ramon",
-    "Score" : 1
-  }, {
-    "Day" : 16,
-    "Difficulty" : "EasyQ",
-    "Month" : 6,
-    "Name" : "Lucas",
-    "Score" : "2"
-  }, {
-    "Day" : 16,
-    "Difficulty" : "MediumQ",
-    "Month" : 5,
-    "Name" : "TestObject",
-    "Score" : 2
-  } ]
+  "Players" : {
+    "1" : {
+      "Day" : 21,
+      "Difficulty" : "HardQ",
+      "Month" : 5,
+      "Name" : "Ramon",
+      "Score" : 5,
+      "Year" : 2018
+    },
+    "2" : {
+      "Day" : 18,
+      "Difficulty" : "HardQ",
+      "Month" : 6,
+      "Name" : "Max",
+      "Score" : 3,
+      "Year" : 2018
+    },
+    "3" : {
+      "Day" : 10,
+      "Difficulty" : "HardQ",
+      "Month" : 5,
+      "Name" : "Gerard",
+      "Score" : 4,
+      "Year" : 2018
+    },
+    "4" : {
+      "Day" : 25,
+      "Difficulty" : "EasyQ",
+      "Month" : 5,
+      "Name" : "d",
+      "Score" : "1",
+      "Year" : 2018
+    },
+    "5" : {
+      "Day" : 25,
+      "Difficulty" : "EasyQ",
+      "Month" : 5,
+      "Name" : "test",
+      "Score" : "1",
+      "Year" : 2018
+    },
+    "6" : {
+      "Day" : 25,
+      "Difficulty" : "EasyQ",
+      "Month" : 5,
+      "Name" : "nnnnnnn",
+      "Score" : "1",
+      "Year" : 2018
+    },
+    "NaN" : {
+      "Day" : 25,
+      "Difficulty" : "MediumQ",
+      "Month" : 5,
+      "Name" : "kl",
+      "Score" : "1",
+      "Year" : 2018
+    }
+  }
 }
