@@ -26,8 +26,23 @@
     for (i in route) {
       document.getElementById("routebeschrijving").innerHTML += (route[i]) + "<br>";
     };
-    localStorage.setItem("info", data.info);
+    localStorage.setItem("explaincorrect", data.explaincorrect);
     localStorage.setItem("correctAnswer", data.correct);
+    localStorage.setItem("fact", data.fact);
+    localStorage.setItem("painter", data.painter);
+    localStorage.setItem("painting", data.painting);
+    if (data.correct == "a") {
+      localStorage.setItem("fullwrittenCorrectAnswer", data.A1)
+    }
+    if (data.correct == "b") {
+      localStorage.setItem("fullwrittenCorrectAnswer", data.A2)
+    }
+    if (data.correct == "c") {
+      localStorage.setItem("fullwrittenCorrectAnswer", data.A3)
+    }
+    if (data.correct == "d") {
+      localStorage.setItem("fullwrittenCorrectAnswer", data.A4)
+    }
   }
   })
 }());
