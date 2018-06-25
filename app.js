@@ -23,6 +23,7 @@
     var routeData = data.route;
     var route = routeData.split("BREAK");
     var i = 0;
+    document.getElementById("routbeschrijving").innerHTML = data.painter;
     for (i in route) {
       document.getElementById("routebeschrijving").innerHTML += (route[i]) + "<br>";
     };
