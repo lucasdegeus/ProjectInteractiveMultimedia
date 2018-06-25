@@ -376,7 +376,7 @@ $(document).ready(function(){
 // }
 
 function submitQuestion() {
-	if (document.getElementById("vraag").value != "" && document.getElementById("ans1").value != "" && document.getElementById("ans2").value != "" && document.getElementById("ans3").value != "" && document.getElementById("ans4").value != "" && document.getElementById("correct").value != "" && document.getElementById("info").value != "" && document.getElementById("route").value != "" && document.getElementById("difficulty").value != "Moeilijkheidsgraad") {
+	if (document.getElementById("vraag").value != "" && document.getElementById("ans1").value != "" && document.getElementById("ans2").value != "" && document.getElementById("ans3").value != "" && document.getElementById("ans4").value != "" && document.getElementById("correct").value != "Correcte antwoord" && document.getElementById("info").value != "" && document.getElementById("routeb").value != "" && document.getElementById("difficulty").value != "Moeilijkheidsgraad") {
 		var ydataObject = null
 		var submitDifficulty = document.getElementById("difficulty").value;
 		const newydataObject = firebase.database().ref().child(submitDifficulty);
@@ -399,6 +399,7 @@ function submitQuestion() {
   xdataObject.child("Q" + newChild).child("A3").set(document.getElementById("ans3").value)
   xdataObject.child("Q" + newChild).child("A4").set(document.getElementById("ans4").value)
   xdataObject.child("Q" + newChild).child("correct").set(document.getElementById("correct").value)
+  xdataObject.child("Q" + newChild).child("explaincorrect").set(document.getElementById("explaincorrect").value)
   xdataObject.child("Q" + newChild).child("route").set(document.getElementById("routeb").value)
   xdataObject.child("Q" + newChild).child("info").set(document.getElementById("info").value)
   xdataObject.child("Q" + newChild).child("fact").set(document.getElementById("fact").value)
@@ -480,8 +481,10 @@ function objectfinderWithInput(objectCode) {
 	c.style.display = "none";
 	var d = document.getElementById("possibleObjects");
 	d.style.display = "none";
-    };
+	};
+
 function searchterm() {
+	if (document.getElementById("zoekterm").value != "") {
 	document.getElementById("possibleObjects").innerHTML = ""
         $.get("https://www.rijksmuseum.nl/api/nl/collection?key=W83gXGlp&format=json&q=" + document.getElementById("zoekterm").value + "&s=relevance" ,function(data,status) {
         	// console.log(data);	
@@ -548,13 +551,13 @@ function searchterm() {
 					elem.width = 50;
 				imageWrapper.appendChild(elem);	
 				objectRow.appendChild(imageWrapper);
-				objectRow.appendChild(selectButton);
-				objectRow.innerHTML += "<br>"
-				document.getElementById("possibleObjects").appendChild(objectRow);   
+				objectRow.innerHTML += "<br>"  
 			}
 				else {
-				document.getElementById("possibleObjects").innerHTML += "Geen foto beschikbaar &emsp;"
+				objectRow.innerHTML += "Geen foto beschikbaar &emsp;"
 				}
+				objectRow.appendChild(selectButton);
+				document.getElementById("possibleObjects").appendChild(objectRow); 
 
 				//Functie is veel te lang maar leek de enige oplossing te zijn.
 				$(function() {
@@ -605,7 +608,10 @@ function searchterm() {
 	// z.style.display = "block";
 		
 
-
+	}
+	else {
+		alert('Voer zoek gegevens in')
+	}
 };
 	
 function showSearchterm() {
@@ -629,29 +635,39 @@ function showObjectfinder() {
 
 
 function objectfinder() {
+	if (document.getElementById("objectnummer").value != "") {
     $.get("https://www.rijksmuseum.nl/api/nl/collection/" + document.getElementById("objectnummer").value + "?key=W83gXGlp&format=json", function(data, status){
-        // console.log(data)
+		// console.log(data)
+		if (data.artObject != null) {
 		document.getElementById("painter").value = data.artObject.principalMakers[0].name;
 		document.getElementById("painting").value = data.artObject.title;
 		document.getElementById("info").value = data.artObject.description;
 		localStorage.setItem("currentPainting", data);
+		var x = document.getElementById("addQuestion");
+		x.style.display = "block";
+		var y = document.getElementById("objectnummer");
+		y.style.display = "none";
+		var z = document.getElementById("submitObject");
+		z.style.display = "none";
+		var a = document.getElementById("inputfields");
+		a.style.display = "none";
+		var b = document.getElementById("buttons");
+		b.style.display = "none";
+		var c = document.getElementById("submit");
+		c.style.display = "none";
+		var d = document.getElementById("possibleObjects");
+		d.style.display = "none";
+		}
+		else {
+			alert("Dit objectnummer bestaat niet of er zijn geen gegevens bekend")
+		}
 
         });7
-    var x = document.getElementById("addQuestion");
-	x.style.display = "block";
-	var y = document.getElementById("objectnummer");
-	y.style.display = "none";
-	var z = document.getElementById("submitObject");
-	z.style.display = "none";
-	var a = document.getElementById("inputfields");
-	a.style.display = "none";
-	var b = document.getElementById("buttons");
-	b.style.display = "none";
-	var c = document.getElementById("submit");
-	c.style.display = "none";
-	var d = document.getElementById("possibleObjects");
-	d.style.display = "none";
-    };
+	}
+	else  {
+		alert('Voer een objectnummer in')
+	}
+}
 
 function manual() {
 	var x = document.getElementById("addQuestion");
