@@ -54,6 +54,7 @@ function receiveData() {
 function progressLoad() {
 	var totalQuestions = localStorage.amountofquestions
 	var currentQuestion = localStorage.counter
+	console.log(totalQuestions);
 	var progressPercentage = currentQuestion / totalQuestions * 100;
 	document.getElementById("passed-questions").style.width = progressPercentage + "%";
 	//document.getElementById("currentQuestion").innerHTML = currentQuestion;
